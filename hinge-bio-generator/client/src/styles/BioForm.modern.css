@@ -1,0 +1,163 @@
+/* Modern BioForm Design */
+
+.bio-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px 24px;
+  padding: 0;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  color: var(--text-primary);
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.form-group input,
+.form-group select {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 12px 16px;
+  color: var(--text-primary);
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+  background: var(--bg-hover);
+}
+
+.form-group input::placeholder {
+  color: var(--text-muted);
+}
+
+.interest-input-group {
+  display: flex;
+  gap: 12px;
+}
+
+.interest-input-group input {
+  flex: 1;
+}
+
+.btn-add-interest {
+  background: var(--accent);
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 12px 20px;
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.btn-add-interest:hover {
+  background: var(--accent-hover);
+  transform: translateY(-2px);
+}
+
+.interests-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.interest-tag {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(99, 102, 241, 0.1);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  border-radius: 20px;
+  padding: 6px 12px;
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.btn-remove-interest {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-size: 16px;
+  padding: 0;
+  transition: all 0.2s ease;
+}
+
+.btn-remove-interest:hover {
+  color: #ef4444;
+  transform: rotate(90deg);
+}
+
+.btn-submit {
+  grid-column: 1 / -1;
+  justify-self: center;
+  background: linear-gradient(135deg, var(--accent), var(--success));
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 14px 32px;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 16px rgba(99, 102, 241, 0.3);
+  margin-top: 16px;
+}
+
+.btn-submit:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(99, 102, 241, 0.4);
+}
+
+.btn-submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.error-message {
+  grid-column: 1 / -1;
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  border-radius: var(--radius-sm);
+  padding: 16px 20px;
+  color: #ef4444;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .bio-form {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .interest-input-group {
+    flex-direction: column;
+  }
+  
+  .btn-submit {
+    padding: 14px 28px;
+    font-size: 15px;
+  }
+}
