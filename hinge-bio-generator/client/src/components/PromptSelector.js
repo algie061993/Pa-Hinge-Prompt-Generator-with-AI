@@ -10,27 +10,64 @@ const HINGE_PROMPTS = {
     "I go crazy for",
     "Typical Sunday",
     "My simple pleasures",
-    "My most irrational fear"
+    "My most irrational fear",
+    "I recently discovered that",
+    "A life goal of mine"
   ],
   "Getting Personal": [
     "My Love Language is",
     "The dorkiest thing about me is",
     "I won't shut up about",
     "The key to my heart is",
-    "I geek out on"
+    "I geek out on",
+    "Dating me is like",
+    "The way to win me over is"
   ],
   "My Type": [
     "We're the same type of weird if",
+    "I'll brag about you to my friends if",
     "I want someone who",
     "Green flags I look out for",
+    "The hallmark of a good relationship is",
+    "I'm weirdly attracted to",
     "I'm looking for",
-    "We'll get along if"
+    "We'll get along if",
+    "Something that's non-negotiable for me is",
+    "All I ask is that you",
+    "I'd fall for you if"
   ],
   "Date Vibes": [
     "First round is on me if",
     "I know the best spot in town for",
     "Together, we could",
-    "What I order for the table"
+    "What I order for the table",
+    "Let's debate this topic",
+    "I bet you can't"
+  ],
+  "Let's Chat About Prompts": [
+    "Change my mind about",
+    "Give me travel tips for",
+    "Teach me something about",
+    "Try to guess this about me",
+    "You should leave a comment if",
+    "I'll pick the topic if you start the conversation",
+    "The one thing I'd love to know about you is",
+    "Let's make sure we're on the same page about",
+    "Do you agree or disagree that"
+  ],
+  "Self-care Prompts": [
+    "My friends ask me for advice about",
+    "Therapy recently taught me",
+    "I feel most supported when",
+    "My last journal entry was about",
+    "My cry-in-the-car song is",
+    "A boundary of mine is",
+    "I unwind by",
+    "My self-care routine is",
+    "I beat my blues by",
+    "When I need advice, I go to",
+    "My therapist would say I",
+    "The last time I cried happy tears was"
   ]
 };
 

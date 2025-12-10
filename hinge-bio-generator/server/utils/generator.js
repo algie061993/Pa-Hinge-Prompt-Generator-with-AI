@@ -1,5 +1,5 @@
 const axios = require('axios');
-const { PROMPT_ANSWERS } = require('./promptAnswers');
+const { PROMPT_ANSWERS } = require('./prompts');
 
 const tryAI = async (prompt, userParams) => {
   if (!process.env.HUGGINGFACE_API_KEY) return null;
@@ -37,7 +37,10 @@ const generateTemplate = (prompt, userParams) => {
   
   const promptData = PROMPT_ANSWERS[prompt];
   const answers = promptData?.[vibe] || promptData?.default || ['Ready for something real'];
-  const answer = answers[0]
+  
+  // Randomly select from available answers
+  const randomIndex = Math.floor(Math.random() * answers.length);
+  const answer = answers[randomIndex]
     .replace(/{city}/g, city)
     .replace(/{i1}/g, i1)
     .replace(/{i2}/g, i2);
