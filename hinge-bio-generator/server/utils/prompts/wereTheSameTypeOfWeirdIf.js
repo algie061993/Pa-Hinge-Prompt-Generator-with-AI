@@ -1,37 +1,87 @@
 const wereTheSameTypeOfWeirdIf = {
   "funny": [
-    "You cancel plans guilt-free and feel absolutely zero regret about it",
-    "You have strong opinions about things that don't matter at all",
-    "You get unreasonably excited about niche {i1} interests that confuse most people"
+    "Making terrible we're the same type of weird if decisions and somehow making them work",
+    "Being confidently wrong about {i1} and owning it completely",
+    "Turning my {i2} disasters into legendary stories",
+    "Overthinking {i1} until it becomes performance art",
+    "My ability to make {i2} awkward in the most charming way",
+    "Finding humor in situations where others see only chaos",
+    "Making {i1} mistakes that become happy accidents",
+    "Being the person who laughs at their own {i2} jokes",
+    "Turning everyday {i1} moments into comedy gold",
+    "My talent for making {i2} seem way more dramatic than it is"
   ],
   "romantic": [
-    "You believe in deep connection over surface level small talk",
-    "You value quality time over expensive dates or grand gestures",
-    "You think vulnerability is strength and not something to hide"
+    "Creating magic in ordinary {i1} moments",
+    "The way {i2} makes everything feel like poetry",
+    "Building something beautiful through {i1} connection",
+    "How {i2} brings out the best version of myself",
+    "Finding someone who makes {i1} feel like home",
+    "The gentle way {i2} love grows over time",
+    "Creating memories that make {i1} unforgettable",
+    "How {i2} turns simple moments into treasures",
+    "Building trust through {i1} vulnerability",
+    "The way {i2} makes ordinary days feel special"
   ],
   "adventurous": [
-    "You say yes first and figure out the details later",
-    "You're always down for spontaneous {i1} adventures",
-    "You think comfort zones are meant to be challenged regularly"
+    "Pushing {i1} boundaries and discovering new possibilities",
+    "Turning {i2} into the adventure of a lifetime",
+    "Exploring uncharted {i1} territory with courage",
+    "Making {i2} spontaneous and thrilling",
+    "Conquering {i1} fears through bold action",
+    "Transforming {i2} into epic experiences",
+    "Taking {i1} risks that lead to amazing stories",
+    "Making {i2} adventures that change everything",
+    "Exploring {i1} with fearless curiosity",
+    "Turning {i2} into unforgettable journeys"
   ],
   "quirky": [
-    "Your interests confuse most people but make perfect sense to you",
-    "You have weird {i1} obsessions that you're not apologizing for",
-    "You find connections between random things that nobody else sees"
+    "My wonderfully weird approach to {i1}",
+    "The strange way I connect {i2} to everything else",
+    "My peculiar {i1} theories that somehow make sense",
+    "How I see {i2} patterns others completely miss",
+    "My unusual {i1} perspective that fascinates people",
+    "The bizarre {i2} connections my brain makes",
+    "My eccentric {i1} habits that work perfectly for me",
+    "How I turn {i2} into something uniquely mine",
+    "My offbeat {i1} observations that surprise people",
+    "The quirky way I experience {i2} differently"
   ],
   "serious": [
-    "You prioritize growth over comfort every single time",
-    "You value substance over style in everything",
-    "You believe actions speak louder than any words ever could"
+    "How we're the same type of weird if shaped my character and values",
+    "The profound impact {i1} has had on my growth",
+    "Building {i2} discipline through consistent effort",
+    "How {i1} taught me resilience and determination",
+    "The meaningful progress I've made with {i2}",
+    "How {i1} challenges have strengthened my resolve",
+    "The deep commitment I have to {i2} excellence",
+    "How {i1} experiences have defined my priorities",
+    "The intentional way I approach {i2} development",
+    "How {i1} has become central to my identity"
   ],
   "intellectual": [
-    "You love discussing {i1} theory just for the sake of understanding",
-    "You question everything about {i2} instead of accepting it at face value",
-    "You think deep conversations are better than small talk any day"
+    "The fascinating complexity underlying {i1}",
+    "How {i2} theory connects to broader philosophical questions",
+    "The analytical framework I use for {i1}",
+    "How {i2} challenges conventional thinking",
+    "The research behind {i1} that most people don't know",
+    "How {i2} reveals deeper truths about human nature",
+    "The systematic approach I take to {i1}",
+    "How {i2} intersects with multiple disciplines",
+    "The theoretical implications of {i1} that intrigue me",
+    "How {i2} advances our understanding of the world"
   ],
   "default": [
-    "Your ideal weekend sounds boring to most people but perfect to you",
-    "You get excited about stuff others find weird and you're okay with that"
+    "The genuine passion I have for {i1}",
+    "How {i2} brings authentic joy to my life",
+    "My natural enthusiasm for {i1} experiences",
+    "The way {i2} makes me feel most like myself",
+    "How {i1} connects me to what matters most",
+    "The energy {i2} gives me every single day",
+    "How {i1} has become part of who I am",
+    "The way {i2} enriches my daily experience",
+    "How {i1} keeps me motivated and inspired",
+    "The role {i2} plays in my happiness"
   ]
 };
 

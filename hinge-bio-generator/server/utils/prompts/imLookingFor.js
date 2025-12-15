@@ -1,52 +1,87 @@
 const imLookingFor = {
   "funny": [
-    "Someone who gets my humor",
-    "A partner in crime for {i1} adventures",
-    "Someone who laughs at my terrible {i2} jokes",
-    "A person who finds my chaos endearing",
-    "Someone who makes me laugh until I can't breathe"
+    "Making terrible i'm looking for decisions and somehow making them work",
+    "Being confidently wrong about {i1} and owning it completely",
+    "Turning my {i2} disasters into legendary stories",
+    "Overthinking {i1} until it becomes performance art",
+    "My ability to make {i2} awkward in the most charming way",
+    "Finding humor in situations where others see only chaos",
+    "Making {i1} mistakes that become happy accidents",
+    "Being the person who laughs at their own {i2} jokes",
+    "Turning everyday {i1} moments into comedy gold",
+    "My talent for making {i2} seem way more dramatic than it is"
   ],
   "romantic": [
-    "Someone ready for something real",
-    "A partner who gets excited about {i2}",
-    "Someone who chooses me every single day",
-    "A person who loves me loudest when I'm hardest to love",
-    "Someone who makes ordinary {i1} moments feel magical"
+    "Creating magic in ordinary {i1} moments",
+    "The way {i2} makes everything feel like poetry",
+    "Building something beautiful through {i1} connection",
+    "How {i2} brings out the best version of myself",
+    "Finding someone who makes {i1} feel like home",
+    "The gentle way {i2} love grows over time",
+    "Creating memories that make {i1} unforgettable",
+    "How {i2} turns simple moments into treasures",
+    "Building trust through {i1} vulnerability",
+    "The way {i2} makes ordinary days feel special"
   ],
   "adventurous": [
-    "Someone who explores {city} with me",
-    "Someone down for spontaneous {i2} adventures",
-    "A person who says yes before thinking it through",
-    "Someone who turns every day into an {i1} adventure",
-    "A partner who matches my energy for {i2} exploration"
+    "Pushing {i1} boundaries and discovering new possibilities",
+    "Turning {i2} into the adventure of a lifetime",
+    "Exploring uncharted {i1} territory with courage",
+    "Making {i2} spontaneous and thrilling",
+    "Conquering {i1} fears through bold action",
+    "Transforming {i2} into epic experiences",
+    "Taking {i1} risks that lead to amazing stories",
+    "Making {i2} adventures that change everything",
+    "Exploring {i1} with fearless curiosity",
+    "Turning {i2} into unforgettable journeys"
   ],
   "quirky": [
-    "Someone who appreciates weird {i1}",
-    "A fellow {i2} enthusiast",
-    "A person who thinks my strange {i1} interests are actually cool",
-    "Someone who has their own weird {i2} obsessions",
-    "A partner who celebrates the bizarre instead of trying to fix it"
+    "My wonderfully weird approach to {i1}",
+    "The strange way I connect {i2} to everything else",
+    "My peculiar {i1} theories that somehow make sense",
+    "How I see {i2} patterns others completely miss",
+    "My unusual {i1} perspective that fascinates people",
+    "The bizarre {i2} connections my brain makes",
+    "My eccentric {i1} habits that work perfectly for me",
+    "How I turn {i2} into something uniquely mine",
+    "My offbeat {i1} observations that surprise people",
+    "The quirky way I experience {i2} differently"
   ],
   "serious": [
-    "Someone with clear intentions",
-    "A genuine partner in growth",
-    "A person who supports my {i1} dreams without trying to control them",
-    "Someone who shows up consistently for {i2}",
-    "A partner who matches my effort and commitment"
+    "How i'm looking for shaped my character and values",
+    "The profound impact {i1} has had on my growth",
+    "Building {i2} discipline through consistent effort",
+    "How {i1} taught me resilience and determination",
+    "The meaningful progress I've made with {i2}",
+    "How {i1} challenges have strengthened my resolve",
+    "The deep commitment I have to {i2} excellence",
+    "How {i1} experiences have defined my priorities",
+    "The intentional way I approach {i2} development",
+    "How {i1} has become central to my identity"
   ],
   "intellectual": [
-    "Someone who loves discussing {i1}",
-    "A curious mind interested in {i2}",
-    "A person who challenges my thinking about {i1}",
-    "Someone who engages with my {i2} ideas like they matter",
-    "A partner who makes me think harder about everything"
+    "The fascinating complexity underlying {i1}",
+    "How {i2} theory connects to broader philosophical questions",
+    "The analytical framework I use for {i1}",
+    "How {i2} challenges conventional thinking",
+    "The research behind {i1} that most people don't know",
+    "How {i2} reveals deeper truths about human nature",
+    "The systematic approach I take to {i1}",
+    "How {i2} intersects with multiple disciplines",
+    "The theoretical implications of {i1} that intrigue me",
+    "How {i2} advances our understanding of the world"
   ],
   "default": [
-    "Someone passionate about their thing",
-    "Ready for something real",
-    "A person who understands why {i1} matters to me",
-    "Someone who shares genuine enthusiasm for {i2}",
-    "A partner who makes me feel heard when I talk about {i1}"
+    "The genuine passion I have for {i1}",
+    "How {i2} brings authentic joy to my life",
+    "My natural enthusiasm for {i1} experiences",
+    "The way {i2} makes me feel most like myself",
+    "How {i1} connects me to what matters most",
+    "The energy {i2} gives me every single day",
+    "How {i1} has become part of who I am",
+    "The way {i2} enriches my daily experience",
+    "How {i1} keeps me motivated and inspired",
+    "The role {i2} plays in my happiness"
   ]
 };
 

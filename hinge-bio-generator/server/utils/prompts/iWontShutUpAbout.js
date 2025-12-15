@@ -1,52 +1,87 @@
 const iWontShutUpAbout = {
   "funny": [
-    "How {i1} is secretly the most important thing ever",
-    "My conspiracy theories about {i2} that are definitely true",
-    "Why {i1} is criminally underrated in society",
-    "The ridiculous amount of {i2} knowledge I've accumulated",
-    "How everyone's doing {i1} completely wrong"
+    "Making terrible i won't shut up about decisions and somehow making them work",
+    "Being confidently wrong about {i1} and owning it completely",
+    "Turning my {i2} disasters into legendary stories",
+    "Overthinking {i1} until it becomes performance art",
+    "My ability to make {i2} awkward in the most charming way",
+    "Finding humor in situations where others see only chaos",
+    "Making {i1} mistakes that become happy accidents",
+    "Being the person who laughs at their own {i2} jokes",
+    "Turning everyday {i1} moments into comedy gold",
+    "My talent for making {i2} seem way more dramatic than it is"
   ],
   "romantic": [
-    "How amazing it feels when someone truly gets your {i1}",
-    "The magic of finding someone who loves your {i2} passion",
-    "Why {i1} connection is the most beautiful thing in the world",
-    "How {i2} brings people together in the most unexpected ways",
-    "The way love makes everything about {i1} more meaningful"
+    "Creating magic in ordinary {i1} moments",
+    "The way {i2} makes everything feel like poetry",
+    "Building something beautiful through {i1} connection",
+    "How {i2} brings out the best version of myself",
+    "Finding someone who makes {i1} feel like home",
+    "The gentle way {i2} love grows over time",
+    "Creating memories that make {i1} unforgettable",
+    "How {i2} turns simple moments into treasures",
+    "Building trust through {i1} vulnerability",
+    "The way {i2} makes ordinary days feel special"
   ],
   "adventurous": [
-    "My next big {i1} adventure that's going to be epic",
-    "Why everyone needs more {i2} spontaneity in their life",
-    "The incredible {i1} places I'm planning to explore",
-    "How {i2} adventures change your entire perspective",
-    "Why comfort zones are the enemy of {i1} greatness"
+    "Pushing {i1} boundaries and discovering new possibilities",
+    "Turning {i2} into the adventure of a lifetime",
+    "Exploring uncharted {i1} territory with courage",
+    "Making {i2} spontaneous and thrilling",
+    "Conquering {i1} fears through bold action",
+    "Transforming {i2} into epic experiences",
+    "Taking {i1} risks that lead to amazing stories",
+    "Making {i2} adventures that change everything",
+    "Exploring {i1} with fearless curiosity",
+    "Turning {i2} into unforgettable journeys"
   ],
   "quirky": [
-    "The fascinating weird details of {i1} that blow my mind",
-    "Why {i2} is actually the most underrated thing ever",
-    "The bizarre {i1} rabbit holes I've fallen down",
-    "How {i2} connects to literally everything in strange ways",
-    "The weirdest {i1} facts that nobody else appreciates"
+    "My wonderfully weird approach to {i1}",
+    "The strange way I connect {i2} to everything else",
+    "My peculiar {i1} theories that somehow make sense",
+    "How I see {i2} patterns others completely miss",
+    "My unusual {i1} perspective that fascinates people",
+    "The bizarre {i2} connections my brain makes",
+    "My eccentric {i1} habits that work perfectly for me",
+    "How I turn {i2} into something uniquely mine",
+    "My offbeat {i1} observations that surprise people",
+    "The quirky way I experience {i2} differently"
   ],
   "serious": [
-    "How {i1} completely changed my perspective on life",
-    "The importance of {i2} that people don't talk about enough",
-    "Why {i1} matters more than most people realize",
-    "The transformative power of {i2} in people's lives",
-    "How {i1} shaped who I am today"
+    "How i won't shut up about shaped my character and values",
+    "The profound impact {i1} has had on my growth",
+    "Building {i2} discipline through consistent effort",
+    "How {i1} taught me resilience and determination",
+    "The meaningful progress I've made with {i2}",
+    "How {i1} challenges have strengthened my resolve",
+    "The deep commitment I have to {i2} excellence",
+    "How {i1} experiences have defined my priorities",
+    "The intentional way I approach {i2} development",
+    "How {i1} has become central to my identity"
   ],
   "intellectual": [
-    "The complex theory behind {i1} that most people miss",
-    "How {i2} connects to everything in ways you wouldn't expect",
-    "The philosophical implications of {i1} that fascinate me",
-    "Why {i2} is more intellectually rich than people think",
-    "The cutting-edge research about {i1} that's changing everything"
+    "The fascinating complexity underlying {i1}",
+    "How {i2} theory connects to broader philosophical questions",
+    "The analytical framework I use for {i1}",
+    "How {i2} challenges conventional thinking",
+    "The research behind {i1} that most people don't know",
+    "How {i2} reveals deeper truths about human nature",
+    "The systematic approach I take to {i1}",
+    "How {i2} intersects with multiple disciplines",
+    "The theoretical implications of {i1} that intrigue me",
+    "How {i2} advances our understanding of the world"
   ],
   "default": [
-    "Why {i1} is actually the best thing ever invented",
-    "How {i2} makes everything in life better",
-    "The endless possibilities that {i1} opens up",
-    "Why more people need to discover {i2}",
-    "How {i1} has become my entire personality (and I'm not sorry)"
+    "The genuine passion I have for {i1}",
+    "How {i2} brings authentic joy to my life",
+    "My natural enthusiasm for {i1} experiences",
+    "The way {i2} makes me feel most like myself",
+    "How {i1} connects me to what matters most",
+    "The energy {i2} gives me every single day",
+    "How {i1} has become part of who I am",
+    "The way {i2} enriches my daily experience",
+    "How {i1} keeps me motivated and inspired",
+    "The role {i2} plays in my happiness"
   ]
 };
 

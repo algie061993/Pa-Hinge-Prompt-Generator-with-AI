@@ -1,52 +1,87 @@
 const theKeyToMyHeartIs = {
   "funny": [
-    "Making me laugh until my {i1} hurts",
-    "Getting my weird {i2} references without explanation",
-    "Laughing at my terrible {i1} jokes like they're genius",
-    "Being funnier than me but letting me think I'm hilarious",
-    "Making {i2} puns that are so bad they're good"
+    "Making terrible the key to my heart is decisions and somehow making them work",
+    "Being confidently wrong about {i1} and owning it completely",
+    "Turning my {i2} disasters into legendary stories",
+    "Overthinking {i1} until it becomes performance art",
+    "My ability to make {i2} awkward in the most charming way",
+    "Finding humor in situations where others see only chaos",
+    "Making {i1} mistakes that become happy accidents",
+    "Being the person who laughs at their own {i2} jokes",
+    "Turning everyday {i1} moments into comedy gold",
+    "My talent for making {i2} seem way more dramatic than it is"
   ],
   "romantic": [
-    "Genuine effort and consistent choosing",
-    "Making me feel safe to be completely myself",
-    "Remembering the little {i1} things that matter to me",
-    "Choosing me every day, not just in the beginning",
-    "Making me feel seen and cherished exactly as I am"
+    "Creating magic in ordinary {i1} moments",
+    "The way {i2} makes everything feel like poetry",
+    "Building something beautiful through {i1} connection",
+    "How {i2} brings out the best version of myself",
+    "Finding someone who makes {i1} feel like home",
+    "The gentle way {i2} love grows over time",
+    "Creating memories that make {i1} unforgettable",
+    "How {i2} turns simple moments into treasures",
+    "Building trust through {i1} vulnerability",
+    "The way {i2} makes ordinary days feel special"
   ],
   "adventurous": [
-    "Being down for spontaneous {i1} adventures",
-    "Matching my energy for {i2} exploration",
-    "Saying yes to my crazy {i1} ideas without hesitation",
-    "Turning ordinary moments into {i2} adventures",
-    "Being my partner in all things wild and wonderful"
+    "Pushing {i1} boundaries and discovering new possibilities",
+    "Turning {i2} into the adventure of a lifetime",
+    "Exploring uncharted {i1} territory with courage",
+    "Making {i2} spontaneous and thrilling",
+    "Conquering {i1} fears through bold action",
+    "Transforming {i2} into epic experiences",
+    "Taking {i1} risks that lead to amazing stories",
+    "Making {i2} adventures that change everything",
+    "Exploring {i1} with fearless curiosity",
+    "Turning {i2} into unforgettable journeys"
   ],
   "quirky": [
-    "Appreciating my strange {i1} obsessions",
-    "Sharing equally weird {i2} interests with me",
-    "Thinking my {i1} quirks are actually endearing",
-    "Having your own weird {i2} thing I can geek out about",
-    "Celebrating the strange instead of trying to fix it"
+    "My wonderfully weird approach to {i1}",
+    "The strange way I connect {i2} to everything else",
+    "My peculiar {i1} theories that somehow make sense",
+    "How I see {i2} patterns others completely miss",
+    "My unusual {i1} perspective that fascinates people",
+    "The bizarre {i2} connections my brain makes",
+    "My eccentric {i1} habits that work perfectly for me",
+    "How I turn {i2} into something uniquely mine",
+    "My offbeat {i1} observations that surprise people",
+    "The quirky way I experience {i2} differently"
   ],
   "serious": [
-    "Showing up with actions, not just words",
-    "Respecting my {i1} boundaries and values",
-    "Consistent communication and emotional availability",
-    "Supporting my {i1} growth without trying to change me",
-    "Being genuinely interested in who I'm becoming"
+    "How the key to my heart is shaped my character and values",
+    "The profound impact {i1} has had on my growth",
+    "Building {i2} discipline through consistent effort",
+    "How {i1} taught me resilience and determination",
+    "The meaningful progress I've made with {i2}",
+    "How {i1} challenges have strengthened my resolve",
+    "The deep commitment I have to {i2} excellence",
+    "How {i1} experiences have defined my priorities",
+    "The intentional way I approach {i2} development",
+    "How {i1} has become central to my identity"
   ],
   "intellectual": [
-    "Deep conversations about {i1} that last for hours",
-    "Challenging my thinking about {i2} in the best way",
-    "Engaging with my {i1} ideas like they actually matter",
-    "Teaching me new perspectives on {i2}",
-    "Making me think harder about everything I believe"
+    "The fascinating complexity underlying {i1}",
+    "How {i2} theory connects to broader philosophical questions",
+    "The analytical framework I use for {i1}",
+    "How {i2} challenges conventional thinking",
+    "The research behind {i1} that most people don't know",
+    "How {i2} reveals deeper truths about human nature",
+    "The systematic approach I take to {i1}",
+    "How {i2} intersects with multiple disciplines",
+    "The theoretical implications of {i1} that intrigue me",
+    "How {i2} advances our understanding of the world"
   ],
   "default": [
-    "Understanding what makes me passionate about {i1}",
-    "Sharing genuine excitement about {i2} with me",
-    "Getting why {i1} matters so much to me",
-    "Being genuinely curious about my {i2} world",
-    "Making me feel heard when I talk about {i1}"
+    "The genuine passion I have for {i1}",
+    "How {i2} brings authentic joy to my life",
+    "My natural enthusiasm for {i1} experiences",
+    "The way {i2} makes me feel most like myself",
+    "How {i1} connects me to what matters most",
+    "The energy {i2} gives me every single day",
+    "How {i1} has become part of who I am",
+    "The way {i2} enriches my daily experience",
+    "How {i1} keeps me motivated and inspired",
+    "The role {i2} plays in my happiness"
   ]
 };
 

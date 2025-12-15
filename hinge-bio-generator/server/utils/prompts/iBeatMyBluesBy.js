@@ -1,52 +1,87 @@
 const iBeatMyBluesBy = {
   "funny": [
-    "Doing {i1} until I remember I'm actually hilarious",
-    "Making {i2} jokes so bad they're good again",
-    "Embracing my {i1} chaos until it becomes comedy gold",
-    "Turning my {i2} drama into entertainment for myself",
-    "Laughing at my problems until they seem ridiculous"
+    "Making terrible i beat my blues by decisions and somehow making them work",
+    "Being confidently wrong about {i1} and owning it completely",
+    "Turning my {i2} disasters into legendary stories",
+    "Overthinking {i1} until it becomes performance art",
+    "My ability to make {i2} awkward in the most charming way",
+    "Finding humor in situations where others see only chaos",
+    "Making {i1} mistakes that become happy accidents",
+    "Being the person who laughs at their own {i2} jokes",
+    "Turning everyday {i1} moments into comedy gold",
+    "My talent for making {i2} seem way more dramatic than it is"
   ],
   "romantic": [
-    "Remembering I'm the main character in my {i1} love story",
-    "Connecting with {i2} that reminds me I'm worth fighting for",
-    "Nurturing the {i1} love I want to give someone special",
-    "Creating {i2} moments that make me fall for my own life",
-    "Practicing self-love like it's preparation for the real thing"
+    "Creating magic in ordinary {i1} moments",
+    "The way {i2} makes everything feel like poetry",
+    "Building something beautiful through {i1} connection",
+    "How {i2} brings out the best version of myself",
+    "Finding someone who makes {i1} feel like home",
+    "The gentle way {i2} love grows over time",
+    "Creating memories that make {i1} unforgettable",
+    "How {i2} turns simple moments into treasures",
+    "Building trust through {i1} vulnerability",
+    "The way {i2} makes ordinary days feel special"
   ],
   "adventurous": [
-    "Planning {i1} adventures that make me feel unstoppable",
-    "Getting outside for {i2} that reminds me I'm alive",
-    "Booking spontaneous {i1} trips that shock my bank account",
-    "Exploring new {i2} territories until I feel brave again",
-    "Saying yes to {i1} experiences that scare me a little"
+    "Pushing {i1} boundaries and discovering new possibilities",
+    "Turning {i2} into the adventure of a lifetime",
+    "Exploring uncharted {i1} territory with courage",
+    "Making {i2} spontaneous and thrilling",
+    "Conquering {i1} fears through bold action",
+    "Transforming {i2} into epic experiences",
+    "Taking {i1} risks that lead to amazing stories",
+    "Making {i2} adventures that change everything",
+    "Exploring {i1} with fearless curiosity",
+    "Turning {i2} into unforgettable journeys"
   ],
   "quirky": [
-    "Fully leaning into my weird {i1} energy",
-    "Diving into {i2} rabbit holes until I feel like myself again",
-    "Celebrating my strange {i1} interests without apology",
-    "Getting lost in bizarre {i2} projects that make me happy",
-    "Embracing my weirdness until it becomes my superpower"
+    "My wonderfully weird approach to {i1}",
+    "The strange way I connect {i2} to everything else",
+    "My peculiar {i1} theories that somehow make sense",
+    "How I see {i2} patterns others completely miss",
+    "My unusual {i1} perspective that fascinates people",
+    "The bizarre {i2} connections my brain makes",
+    "My eccentric {i1} habits that work perfectly for me",
+    "How I turn {i2} into something uniquely mine",
+    "My offbeat {i1} observations that surprise people",
+    "The quirky way I experience {i2} differently"
   ],
   "serious": [
-    "Focusing on {i1} growth that makes me proud",
-    "Practicing gratitude for {i2} that grounds me",
-    "Investing in {i1} healing that strengthens my foundation",
-    "Committing to {i2} practices that center my energy",
-    "Choosing growth over comfort every single time"
+    "How i beat my blues by shaped my character and values",
+    "The profound impact {i1} has had on my growth",
+    "Building {i2} discipline through consistent effort",
+    "How {i1} taught me resilience and determination",
+    "The meaningful progress I've made with {i2}",
+    "How {i1} challenges have strengthened my resolve",
+    "The deep commitment I have to {i2} excellence",
+    "How {i1} experiences have defined my priorities",
+    "The intentional way I approach {i2} development",
+    "How {i1} has become central to my identity"
   ],
   "intellectual": [
-    "Learning {i1} facts that make me feel mysteriously attractive",
-    "Analyzing {i2} until I feel smart and sexy again",
-    "Studying {i1} theory until my brain feels satisfied",
-    "Researching {i2} topics that expand my perspective",
-    "Getting lost in {i1} knowledge that makes me interesting"
+    "The fascinating complexity underlying {i1}",
+    "How {i2} theory connects to broader philosophical questions",
+    "The analytical framework I use for {i1}",
+    "How {i2} challenges conventional thinking",
+    "The research behind {i1} that most people don't know",
+    "How {i2} reveals deeper truths about human nature",
+    "The systematic approach I take to {i1}",
+    "How {i2} intersects with multiple disciplines",
+    "The theoretical implications of {i1} that intrigue me",
+    "How {i2} advances our understanding of the world"
   ],
   "default": [
-    "Doing {i1} things that remind me I'm amazing",
-    "Finding magic in simple {i2} moments",
-    "Reconnecting with my {i1} passion until I feel alive",
-    "Creating {i2} experiences that bring me joy",
-    "Remembering all the reasons I love my {i1} life"
+    "The genuine passion I have for {i1}",
+    "How {i2} brings authentic joy to my life",
+    "My natural enthusiasm for {i1} experiences",
+    "The way {i2} makes me feel most like myself",
+    "How {i1} connects me to what matters most",
+    "The energy {i2} gives me every single day",
+    "How {i1} has become part of who I am",
+    "The way {i2} enriches my daily experience",
+    "How {i1} keeps me motivated and inspired",
+    "The role {i2} plays in my happiness"
   ]
 };
 
