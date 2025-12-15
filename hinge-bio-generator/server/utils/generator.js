@@ -36,7 +36,7 @@ const generateTemplate = (prompt, userParams) => {
   const vibe = desiredVibe?.toLowerCase() || 'default';
   
   const promptData = PROMPT_ANSWERS[prompt];
-  const answers = promptData?.[vibe] || promptData?.default || ['Ready for something real'];
+  const answers = promptData?.[vibe] || promptData?.default || [`Something meaningful about ${i1}`, `Genuine connection through ${i2}`, `Authentic experiences with ${i1}`];
   
   // Randomly select from available answers
   const randomIndex = Math.floor(Math.random() * answers.length);

@@ -45,6 +45,13 @@ const theKeyToMyHeartIs = require('./theKeyToMyHeartIs');
 const iWontShutUpAbout = require('./iWontShutUpAbout');
 const iGeekOutOn = require('./iGeekOutOn');
 const whatIOrderForTheTable = require('./whatIOrderForTheTable');
+const myFriendsAskMeForAdviceAbout = require('./myFriendsAskMeForAdviceAbout');
+const therapyRecentlyTaughtMe = require('./therapyRecentlyTaughtMe');
+const iFeelMostSupportedWhen = require('./iFeelMostSupportedWhen');
+const wellGetAlongIf = require('./wellGetAlongIf');
+const somethingThatsNonNegotiableForMeIs = require('./somethingThatsNonNegotiableForMeIs');
+const allIAskIsThatYou = require('./allIAskIsThatYou');
+const idFallForYouIf = require('./idFallForYouIf');
 
 // Master prompt answers object
 const PROMPT_ANSWERS = {
@@ -94,6 +101,13 @@ const PROMPT_ANSWERS = {
   "I won't shut up about": iWontShutUpAbout,
   "I geek out on": iGeekOutOn,
   "What I order for the table": whatIOrderForTheTable,
+  "My friends ask me for advice about": myFriendsAskMeForAdviceAbout,
+  "Therapy recently taught me": therapyRecentlyTaughtMe,
+  "I feel most supported when": iFeelMostSupportedWhen,
+  "We'll get along if": wellGetAlongIf,
+  "Something that's non-negotiable for me is": somethingThatsNonNegotiableForMeIs,
+  "All I ask is that you": allIAskIsThatYou,
+  "I'd fall for you if": idFallForYouIf,
 };
 
 module.exports = { PROMPT_ANSWERS };
