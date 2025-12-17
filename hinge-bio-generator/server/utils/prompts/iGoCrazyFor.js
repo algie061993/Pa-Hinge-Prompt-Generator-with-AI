@@ -1,87 +1,52 @@
 const iGoCrazyFor = {
   "funny": [
-    "Plot twist: Making terrible i go crazy for decisions and somehow making them work",
-    "Confession: Being confidently wrong about {i1} and owning it completely",
-    "Warning: Turning my {i2} disasters into legendary stories",
-    "Fun fact: Overthinking {i1} until it becomes performance art",
-    "Spoiler alert: My ability to make {i2} awkward in the most charming way",
-    "Finding humor in situations where others see only chaos. Care to join me?",
-    "Making {i1} mistakes that become happy accidents. Think you can handle it?",
-    "Being the person who laughs at their own {i2} jokes. Want to test this theory?",
-    "Turning everyday {i1} moments into comedy gold. Ready for an adventure?",
-    "My talent for making {i2} seem way more dramatic than it is. Interested in finding out?"
+    "Really good {i1} that's done exactly right",
+    "People who are passionate about weird {i2} stuff",
+    "When someone shares my random {i1} obsessions",
+    "Perfect {i2} that makes me lose all self-control",
+    "Finding someone who gets excited about {i1} with me"
   ],
   "romantic": [
-    "Here's the thing: Creating magic in ordinary {i1} moments",
-    "What I've learned: The way {i2} makes everything feel like poetry",
-    "The truth is: Building something beautiful through {i1} connection",
-    "I believe: How {i2} brings out the best version of myself",
-    "My heart says: Finding someone who makes {i1} feel like home",
-    "The gentle way {i2} love grows over time. Care to join me?",
-    "Creating memories that make {i1} unforgettable. Think you can handle it?",
-    "How {i2} turns simple moments into treasures. Want to test this theory?",
-    "Building trust through {i1} vulnerability. Ready for an adventure?",
-    "The way {i2} makes ordinary days feel special. Interested in finding out?"
+    "Deep conversations about {i1} that last for hours",
+    "When someone shares my genuine passion for {i2}",
+    "Those rare moments of perfect {i1} connection",
+    "Finding someone who gets excited about {i2} with me",
+    "The way {i1} brings people together beautifully"
   ],
   "adventurous": [
-    "Next mission: Pushing {i1} boundaries and discovering new possibilities",
-    "Challenge accepted: Turning {i2} into the adventure of a lifetime",
-    "Adventure mode: Exploring uncharted {i1} territory with courage",
-    "Life goal unlocked: Making {i2} spontaneous and thrilling",
-    "New territory: Conquering {i1} fears through bold action",
-    "Transforming {i2} into epic experiences. Care to join me?",
-    "Taking {i1} risks that lead to amazing stories. Think you can handle it?",
-    "Making {i2} adventures that change everything. Want to test this theory?",
-    "Exploring {i1} with fearless curiosity. Ready for an adventure?",
-    "Turning {i2} into unforgettable journeys. Interested in finding out?"
+    "Discovering hidden {i1} gems in {city}",
+    "Spontaneous {i2} adventures that weren't planned",
+    "That rush of trying {i1} for the first time",
+    "Epic {i2} experiences that change everything",
+    "Exploring uncharted {i1} possibilities"
   ],
   "quirky": [
-    "Random observation: My wonderfully weird approach to {i1}",
-    "Weird theory: The strange way I connect {i2} to everything else",
-    "Strange but true: My peculiar {i1} theories that somehow make sense",
-    "Oddly specific: How I see {i2} patterns others completely miss",
-    "Unpopular opinion: My unusual {i1} perspective that fascinates people",
-    "The bizarre {i2} connections my brain makes. Care to join me?",
-    "My eccentric {i1} habits that work perfectly for me. Think you can handle it?",
-    "How I turn {i2} into something uniquely mine. Want to test this theory?",
-    "My offbeat {i1} observations that surprise people. Ready for an adventure?",
-    "The quirky way I experience {i2} differently. Interested in finding out?"
+    "Obscure {i1} facts that blow my mind",
+    "The strange side of {i2} culture most people don't know",
+    "Finding someone who appreciates my {i1} knowledge",
+    "The bizarre {i2} connections I discover",
+    "Why {i1} is actually the most fascinating thing ever"
   ],
   "serious": [
-    "What I've learned: How i go crazy for shaped my character and values",
-    "Hard truth: The profound impact {i1} has had on my growth",
-    "Life lesson: Building {i2} discipline through consistent effort",
-    "Growth mindset: How {i1} taught me resilience and determination",
-    "Real talk: The meaningful progress I've made with {i2}",
-    "How {i1} challenges have strengthened my resolve. Care to join me?",
-    "The deep commitment I have to {i2} excellence. Think you can handle it?",
-    "How {i1} experiences have defined my priorities. Want to test this theory?",
-    "The intentional way I approach {i2} development. Ready for an adventure?",
-    "How {i1} has become central to my identity. Interested in finding out?"
+    "Excellence in {i1} and the dedication it requires",
+    "Meaningful progress in {i2} that creates lasting impact",
+    "The pursuit of {i1} mastery regardless of how long it takes",
+    "How {i2} challenges have shaped my character",
+    "The deeper meaning behind {i1} that most people miss"
   ],
   "intellectual": [
-    "Fascinating insight: The fascinating complexity underlying {i1}",
-    "Theory I'm testing: How {i2} theory connects to broader philosophical questions",
-    "Research shows: The analytical framework I use for {i1}",
-    "Counterintuitive truth: How {i2} challenges conventional thinking",
-    "Deep dive revelation: The research behind {i1} that most people don't know",
-    "How {i2} reveals deeper truths about human nature. Care to join me?",
-    "The systematic approach I take to {i1}. Think you can handle it?",
-    "How {i2} intersects with multiple disciplines. Want to test this theory?",
-    "The theoretical implications of {i1} that intrigue me. Ready for an adventure?",
-    "How {i2} advances our understanding of the world. Interested in finding out?"
+    "The philosophy behind {i1} and why it works",
+    "Complex {i2} theories that challenge conventional wisdom",
+    "The cutting-edge developments in {i1} that excite me",
+    "How {i2} connects to everything in unexpected ways",
+    "The theoretical implications of {i1} that intrigue me"
   ],
   "default": [
-    "Here's what I know: The genuine passion I have for {i1}",
-    "Honest truth: How {i2} brings authentic joy to my life",
-    "What I've realized: My natural enthusiasm for {i1} experiences",
-    "Simple fact: The way {i2} makes me feel most like myself",
-    "Personal discovery: How {i1} connects me to what matters most",
-    "The energy {i2} gives me every single day. Care to join me?",
-    "How {i1} has become part of who I am. Think you can handle it?",
-    "The way {i2} enriches my daily experience. Want to test this theory?",
-    "How {i1} keeps me motivated and inspired. Ready for an adventure?",
-    "The role {i2} plays in my happiness. Interested in finding out?"
+    "Really good {i1} that's done with passion",
+    "Perfect {i2} spots in {city} with the right vibe",
+    "When someone shares my enthusiasm for {i1}",
+    "Discovering new {i2} experiences that blow my mind",
+    "The perfect combination of {i1} and good company"
   ]
 };
 
