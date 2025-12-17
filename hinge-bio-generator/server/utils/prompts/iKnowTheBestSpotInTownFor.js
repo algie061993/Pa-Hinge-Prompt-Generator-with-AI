@@ -1,52 +1,52 @@
 const iKnowTheBestSpotInTownFor = {
   "funny": [
-    "Being hilariously bad at i know the best spot in town for and owning it",
-    "Making i know the best spot in town for disasters into comedy gold",
-    "Why overthinking i know the best spot in town for is actually an art form",
-    "How to turn i know the best spot in town for awkwardness into charm",
-    "Making terrible i know the best spot in town for decisions with confidence"
+    "{i1} in the most hilariously unexpected ways 😂 - what's your weirdest {i1} story?",
+    "turning {i2} into comedy gold somehow - I have a gift! - please tell me you relate 😅",
+    "finding the humor in {i1} situations that others miss - am I the only one who thinks this?",
+    "making {i2} way more entertaining than it should be in {city} - what's your take on this madness?",
+    "being confidently chaotic about {i1} - is this too chaotic for you? 🤪"
   ],
   "romantic": [
-    "Creating beautiful i know the best spot in town for moments together",
-    "How i know the best spot in town for brings out our best selves",
-    "Building something meaningful through i know the best spot in town for",
-    "The way i know the best spot in town for makes everything feel magical",
-    "Finding deep connection in i know the best spot in town for experiences"
+    "sharing {i1} with someone who truly gets it ❤️ - what makes your heart skip a beat?",
+    "creating beautiful {i2} moments together in {city} - does this sound like your love language too? ❤️",
+    "finding deep connection through {i1} experiences - what's your idea of the perfect moment?",
+    "making {i2} feel magical and special with the right person - would you want to experience this together?",
+    "building intimacy around shared {i1} passions - what makes you feel most loved?"
   ],
   "adventurous": [
-    "Exploring i know the best spot in town for territories nobody's discovered",
-    "Turning i know the best spot in town for into epic adventures",
-    "Pushing i know the best spot in town for boundaries fearlessly",
-    "Making i know the best spot in town for spontaneous and thrilling",
-    "Conquering i know the best spot in town for challenges together"
+    "exploring {i1} in wild new ways 🌟 - what's on your bucket list?",
+    "turning {i2} into spontaneous adventures from {city} - want to be my adventure buddy? 🌟",
+    "taking {i1} to the next level - who's coming with me? - what's the wildest thing you've done?",
+    "discovering {i2} possibilities everywhere I go - where should we explore first?",
+    "making {i1} part of my best travel stories - ready for some spontaneous fun?"
   ],
   "quirky": [
-    "My wonderfully weird i know the best spot in town for perspective",
-    "The strange way I approach i know the best spot in town for",
-    "My peculiar i know the best spot in town for theories that actually work",
-    "How I see i know the best spot in town for patterns others miss",
-    "My unusual i know the best spot in town for methods that fascinate people"
+    "{i1} in wonderfully weird ways 🤪 - too weird for you or just weird enough? 🤪",
+    "finding unique perspectives on {i2} that others miss - what's your strangest obsession?",
+    "appreciating the strange details of {i1} in {city} - embrace the weird with me?",
+    "celebrating the oddness of {i2} - embrace the weird! - what makes you wonderfully different?",
+    "having unconventional {i1} experiences that make great stories - ready to be delightfully odd together?"
   ],
   "serious": [
-    "Building i know the best spot in town for character through consistent effort",
-    "How i know the best spot in town for has shaped my core values",
-    "Developing i know the best spot in town for discipline that creates results",
-    "The meaningful impact i know the best spot in town for has on growth",
-    "How i know the best spot in town for challenges have built my resilience"
+    "approaching {i1} with genuine intention and purpose - what drives your personal growth?",
+    "growing through {i2} challenges that shape who I am - how do you stay motivated?",
+    "building discipline around {i1} to achieve my goals - what's your biggest life lesson?",
+    "creating meaningful {i2} impact in {city} and beyond - what matters most to you?",
+    "mastering the fundamentals of {i1} with dedication - how do you define success?"
   ],
   "intellectual": [
-    "The fascinating complexity underlying i know the best spot in town for",
-    "How i know the best spot in town for theory connects to deeper questions",
-    "The analytical framework I use for i know the best spot in town for",
-    "How i know the best spot in town for challenges conventional wisdom",
-    "The research behind i know the best spot in town for that's groundbreaking"
+    "analyzing {i1} from multiple angles 🧠 - what's your perspective on this? 🧠",
+    "understanding the deeper theory behind {i2} - want to dive deeper into this topic?",
+    "researching {i1} extensively - what have - what have you learned recently?",
+    "connecting {i2} to bigger philosophical concepts - challenge my thinking on this?",
+    "exploring the complexity of {i1} in our modern world - what fascinates you most?"
   ],
   "default": [
-    "The genuine passion I have for i know the best spot in town for",
-    "How i know the best spot in town for brings authentic joy to life",
-    "My natural enthusiasm for i know the best spot in town for",
-    "The way i know the best spot in town for makes me feel most myself",
-    "How i know the best spot in town for connects me to what matters"
+    "enjoying {i1} authentically every day ✨ - what brings you joy?",
+    "sharing my {i2} passion with others in {city} - what's your version of this? ✨",
+    "experiencing {i1} fully and mindfully - how do you make life meaningful?",
+    "appreciating the beauty in {i2} moments - what's your passion?",
+    "living {i1} genuinely and inspiring others to do the same - what makes you feel alive?"
   ]
 };
 

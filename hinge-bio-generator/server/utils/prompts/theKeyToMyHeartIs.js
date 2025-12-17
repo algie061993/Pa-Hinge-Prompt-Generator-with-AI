@@ -1,52 +1,52 @@
 const theKeyToMyHeartIs = {
   "funny": [
-    "Being hilariously bad at the key to my heart is and owning it",
-    "Making the key to my heart is disasters into comedy gold",
-    "Why overthinking the key to my heart is is actually an art form",
-    "How to turn the key to my heart is awkwardness into charm",
-    "Making terrible the key to my heart is decisions with confidence"
+    "{i1} in the most hilariously unexpected ways 😂 - what's your weirdest {i1} story?",
+    "turning {i2} into comedy gold somehow - I have a gift! - please tell me you relate 😅",
+    "finding the humor in {i1} situations that others miss - am I the only one who thinks this?",
+    "making {i2} way more entertaining than it should be in {city} - what's your take on this madness?",
+    "being confidently chaotic about {i1} - is this too chaotic for you? 🤪"
   ],
   "romantic": [
-    "Creating beautiful the key to my heart is moments together",
-    "How the key to my heart is brings out our best selves",
-    "Building something meaningful through the key to my heart is",
-    "The way the key to my heart is makes everything feel magical",
-    "Finding deep connection in the key to my heart is experiences"
+    "sharing {i1} with someone who truly gets it ❤️ - what makes your heart skip a beat?",
+    "creating beautiful {i2} moments together in {city} - does this sound like your love language too? ❤️",
+    "finding deep connection through {i1} experiences - what's your idea of the perfect moment?",
+    "making {i2} feel magical and special with the right person - would you want to experience this together?",
+    "building intimacy around shared {i1} passions - what makes you feel most loved?"
   ],
   "adventurous": [
-    "Exploring the key to my heart is territories nobody's discovered",
-    "Turning the key to my heart is into epic adventures",
-    "Pushing the key to my heart is boundaries fearlessly",
-    "Making the key to my heart is spontaneous and thrilling",
-    "Conquering the key to my heart is challenges together"
+    "exploring {i1} in wild new ways 🌟 - what's on your bucket list?",
+    "turning {i2} into spontaneous adventures from {city} - want to be my adventure buddy? 🌟",
+    "taking {i1} to the next level - who's coming with me? - what's the wildest thing you've done?",
+    "discovering {i2} possibilities everywhere I go - where should we explore first?",
+    "making {i1} part of my best travel stories - ready for some spontaneous fun?"
   ],
   "quirky": [
-    "My wonderfully weird the key to my heart is perspective",
-    "The strange way I approach the key to my heart is",
-    "My peculiar the key to my heart is theories that actually work",
-    "How I see the key to my heart is patterns others miss",
-    "My unusual the key to my heart is methods that fascinate people"
+    "{i1} in wonderfully weird ways 🤪 - too weird for you or just weird enough? 🤪",
+    "finding unique perspectives on {i2} that others miss - what's your strangest obsession?",
+    "appreciating the strange details of {i1} in {city} - embrace the weird with me?",
+    "celebrating the oddness of {i2} - embrace the weird! - what makes you wonderfully different?",
+    "having unconventional {i1} experiences that make great stories - ready to be delightfully odd together?"
   ],
   "serious": [
-    "Building the key to my heart is character through consistent effort",
-    "How the key to my heart is has shaped my core values",
-    "Developing the key to my heart is discipline that creates results",
-    "The meaningful impact the key to my heart is has on growth",
-    "How the key to my heart is challenges have built my resilience"
+    "approaching {i1} with genuine intention and purpose - what drives your personal growth?",
+    "growing through {i2} challenges that shape who I am - how do you stay motivated?",
+    "building discipline around {i1} to achieve my goals - what's your biggest life lesson?",
+    "creating meaningful {i2} impact in {city} and beyond - what matters most to you?",
+    "mastering the fundamentals of {i1} with dedication - how do you define success?"
   ],
   "intellectual": [
-    "The fascinating complexity underlying the key to my heart is",
-    "How the key to my heart is theory connects to deeper questions",
-    "The analytical framework I use for the key to my heart is",
-    "How the key to my heart is challenges conventional wisdom",
-    "The research behind the key to my heart is that's groundbreaking"
+    "analyzing {i1} from multiple angles 🧠 - what's your perspective on this? 🧠",
+    "understanding the deeper theory behind {i2} - want to dive deeper into this topic?",
+    "researching {i1} extensively - what have - what have you learned recently?",
+    "connecting {i2} to bigger philosophical concepts - challenge my thinking on this?",
+    "exploring the complexity of {i1} in our modern world - what fascinates you most?"
   ],
   "default": [
-    "The genuine passion I have for the key to my heart is",
-    "How the key to my heart is brings authentic joy to life",
-    "My natural enthusiasm for the key to my heart is",
-    "The way the key to my heart is makes me feel most myself",
-    "How the key to my heart is connects me to what matters"
+    "enjoying {i1} authentically every day ✨ - what brings you joy?",
+    "sharing my {i2} passion with others in {city} - what's your version of this? ✨",
+    "experiencing {i1} fully and mindfully - how do you make life meaningful?",
+    "appreciating the beauty in {i2} moments - what's your passion?",
+    "living {i1} genuinely and inspiring others to do the same - what makes you feel alive?"
   ]
 };
 

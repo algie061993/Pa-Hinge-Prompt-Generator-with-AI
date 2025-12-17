@@ -1,52 +1,52 @@
 const myGreatestStrength = {
   "funny": [
-    "Making awkward situations somehow even more awkward but funny",
-    "Finding humor when everything goes wrong",
-    "Turning uncomfortable moments into stories we'll laugh about",
-    "Being confidently wrong about {i1} and owning it",
-    "Making {i2} disasters seem charming somehow"
+    "{i1} in the most hilariously unexpected ways 😂 - what's your weirdest {i1} story?",
+    "turning {i2} into comedy gold somehow - I have a gift! - please tell me you relate 😅",
+    "finding the humor in {i1} situations that others miss - am I the only one who thinks this?",
+    "making {i2} way more entertaining than it should be in {city} - what's your take on this madness?",
+    "being confidently chaotic about {i1} - is this too chaotic for you? 🤪"
   ],
   "romantic": [
-    "Making people feel genuinely heard and understood",
-    "Being completely present instead of thinking what to say next",
-    "Remembering the little things that matter to you",
-    "Creating safe spaces for {i1} vulnerability",
-    "Loving people exactly as they are"
+    "sharing {i1} with someone who truly gets it ❤️ - what makes your heart skip a beat?",
+    "creating beautiful {i2} moments together in {city} - does this sound like your love language too? ❤️",
+    "finding deep connection through {i1} experiences - what's your idea of the perfect moment?",
+    "making {i2} feel magical and special with the right person - would you want to experience this together?",
+    "building intimacy around shared {i1} passions - what makes you feel most loved?"
   ],
   "adventurous": [
-    "Turning random ideas into actual {i1} adventures",
-    "Always being down to try something new with {i2}",
-    "Convincing people to step outside their comfort zone",
-    "Making spontaneous {i1} decisions that work out",
-    "Finding adventure in ordinary {i2} moments"
+    "exploring {i1} in wild new ways 🌟 - what's on your bucket list?",
+    "turning {i2} into spontaneous adventures from {city} - want to be my adventure buddy? 🌟",
+    "taking {i1} to the next level - who's coming with me? - what's the wildest thing you've done?",
+    "discovering {i2} possibilities everywhere I go - where should we explore first?",
+    "making {i1} part of my best travel stories - ready for some spontaneous fun?"
   ],
   "quirky": [
-    "Seeing connections between {i1} things others miss",
-    "Thinking outside every possible {i2} box",
-    "Finding patterns in {i1} chaos that make sense to me",
-    "Having unusual perspectives on {i2} that fascinate people",
-    "Making weird {i1} observations that are surprisingly deep"
+    "{i1} in wonderfully weird ways 🤪 - too weird for you or just weird enough? 🤪",
+    "finding unique perspectives on {i2} that others miss - what's your strangest obsession?",
+    "appreciating the strange details of {i1} in {city} - embrace the weird with me?",
+    "celebrating the oddness of {i2} - embrace the weird! - what makes you wonderfully different?",
+    "having unconventional {i1} experiences that make great stories - ready to be delightfully odd together?"
   ],
   "serious": [
-    "Staying composed under pressure when others panic",
-    "Making difficult {i1} decisions with clarity",
-    "Maintaining focus on what matters in {i2} chaos",
-    "Building resilience through every challenge",
-    "Leading by example in {i1} situations"
+    "approaching {i1} with genuine intention and purpose - what drives your personal growth?",
+    "growing through {i2} challenges that shape who I am - how do you stay motivated?",
+    "building discipline around {i1} to achieve my goals - what's your biggest life lesson?",
+    "creating meaningful {i2} impact in {city} and beyond - what matters most to you?",
+    "mastering the fundamentals of {i1} with dedication - how do you define success?"
   ],
   "intellectual": [
-    "Analyzing complex {i1} problems systematically",
-    "Connecting abstract {i2} concepts in new ways",
-    "Asking the questions about {i1} nobody thinks to ask",
-    "Breaking down complicated {i2} into manageable pieces",
-    "Seeing the bigger picture in {i1} details"
+    "analyzing {i1} from multiple angles 🧠 - what's your perspective on this? 🧠",
+    "understanding the deeper theory behind {i2} - want to dive deeper into this topic?",
+    "researching {i1} extensively - what have - what have you learned recently?",
+    "connecting {i2} to bigger philosophical concepts - challenge my thinking on this?",
+    "exploring the complexity of {i1} in our modern world - what fascinates you most?"
   ],
   "default": [
-    "Staying calm when things don't go as planned",
-    "Actually listening to understand, not just respond",
-    "Making people comfortable being themselves around me",
-    "Turning {i1} challenges into opportunities",
-    "Being genuinely curious about what makes people tick"
+    "enjoying {i1} authentically every day ✨ - what brings you joy?",
+    "sharing my {i2} passion with others in {city} - what's your version of this? ✨",
+    "experiencing {i1} fully and mindfully - how do you make life meaningful?",
+    "appreciating the beauty in {i2} moments - what's your passion?",
+    "living {i1} genuinely and inspiring others to do the same - what makes you feel alive?"
   ]
 };
 

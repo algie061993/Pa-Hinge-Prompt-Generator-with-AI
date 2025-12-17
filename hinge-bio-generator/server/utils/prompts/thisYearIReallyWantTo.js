@@ -1,52 +1,52 @@
 const thisYearIReallyWantTo = {
   "funny": [
-    "Master {i1} or at least stop being terrible at it",
-    "Convince myself I'm funny enough to quit my day job",
-    "Actually get good at {i1} instead of pretending",
-    "Stop saying maybe and just book that {i2} trip",
-    "Turn my weird {i1} obsession into something people care about"
+    "{i1} in the most hilariously unexpected ways 😂 - what's your weirdest {i1} story?",
+    "turning {i2} into comedy gold somehow - I have a gift! - please tell me you relate 😅",
+    "finding the humor in {i1} situations that others miss - am I the only one who thinks this?",
+    "making {i2} way more entertaining than it should be in {city} - what's your take on this madness?",
+    "being confidently chaotic about {i1} - is this too chaotic for you? 🤪"
   ],
   "romantic": [
-    "Find someone to explore every corner of {city} with",
-    "Meet someone who makes me want to be better",
-    "Build something real with someone who gets {i2}",
-    "Create lasting memories with someone special",
-    "Find love that feels safe and wild at the same time"
+    "sharing {i1} with someone who truly gets it ❤️ - what makes your heart skip a beat?",
+    "creating beautiful {i2} moments together in {city} - does this sound like your love language too? ❤️",
+    "finding deep connection through {i1} experiences - what's your idea of the perfect moment?",
+    "making {i2} feel magical and special with the right person - would you want to experience this together?",
+    "building intimacy around shared {i1} passions - what makes you feel most loved?"
   ],
   "adventurous": [
-    "Actually book that {i2} trip I keep talking about",
-    "Try every {i1} spot in {city} before year ends",
-    "Stop putting off all the things I've been planning",
-    "Conquer my biggest {i1} fear this year",
-    "Turn my {i2} bucket list into reality"
+    "exploring {i1} in wild new ways 🌟 - what's on your bucket list?",
+    "turning {i2} into spontaneous adventures from {city} - want to be my adventure buddy? 🌟",
+    "taking {i1} to the next level - who's coming with me? - what's the wildest thing you've done?",
+    "discovering {i2} possibilities everywhere I go - where should we explore first?",
+    "making {i1} part of my best travel stories - ready for some spontaneous fun?"
   ],
   "quirky": [
-    "Turn my weird {i1} obsession into something meaningful",
-    "Finally embrace being the {i1} person everyone knows",
-    "Create something uniquely weird with {i2}",
-    "Start a {i1} collection that makes people question my sanity",
-    "Master the art of {i2} in the most unusual way"
+    "{i1} in wonderfully weird ways 🤪 - too weird for you or just weird enough? 🤪",
+    "finding unique perspectives on {i2} that others miss - what's your strangest obsession?",
+    "appreciating the strange details of {i1} in {city} - embrace the weird with me?",
+    "celebrating the oddness of {i2} - embrace the weird! - what makes you wonderfully different?",
+    "having unconventional {i1} experiences that make great stories - ready to be delightfully odd together?"
   ],
   "serious": [
-    "Build a meaningful career around {i1}",
-    "Create lasting change through {i2}",
-    "Achieve mastery in {i1} through dedicated practice",
-    "Make a real difference in {i2}",
-    "Become the person I've always wanted to be"
+    "approaching {i1} with genuine intention and purpose - what drives your personal growth?",
+    "growing through {i2} challenges that shape who I am - how do you stay motivated?",
+    "building discipline around {i1} to achieve my goals - what's your biggest life lesson?",
+    "creating meaningful {i2} impact in {city} and beyond - what matters most to you?",
+    "mastering the fundamentals of {i1} with dedication - how do you define success?"
   ],
   "intellectual": [
-    "Deep dive into the theory behind {i1}",
-    "Master the complexities of {i2}",
-    "Explore the philosophical implications of {i1}",
-    "Contribute original thinking to {i2}",
-    "Understand {i1} at a fundamental level"
+    "analyzing {i1} from multiple angles 🧠 - what's your perspective on this? 🧠",
+    "understanding the deeper theory behind {i2} - want to dive deeper into this topic?",
+    "researching {i1} extensively - what have - what have you learned recently?",
+    "connecting {i2} to bigger philosophical concepts - challenge my thinking on this?",
+    "exploring the complexity of {i1} in our modern world - what fascinates you most?"
   ],
   "default": [
-    "Get really good at {i1} and be proud of it",
-    "Turn my {i1} obsession into something real",
-    "Finally commit to the {i2} goals I keep putting off",
-    "Make {i1} a bigger part of my daily life",
-    "Stop talking about {i2} and actually start doing it"
+    "enjoying {i1} authentically every day ✨ - what brings you joy?",
+    "sharing my {i2} passion with others in {city} - what's your version of this? ✨",
+    "experiencing {i1} fully and mindfully - how do you make life meaningful?",
+    "appreciating the beauty in {i2} moments - what's your passion?",
+    "living {i1} genuinely and inspiring others to do the same - what makes you feel alive?"
   ]
 };
 

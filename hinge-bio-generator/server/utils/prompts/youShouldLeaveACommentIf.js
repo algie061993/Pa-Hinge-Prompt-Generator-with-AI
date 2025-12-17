@@ -1,52 +1,52 @@
 const youShouldLeaveACommentIf = {
   "funny": [
-    "Being hilariously bad at you should leave a comment if and owning it",
-    "Making you should leave a comment if disasters into comedy gold",
-    "Why overthinking you should leave a comment if is actually an art form",
-    "How to turn you should leave a comment if awkwardness into charm",
-    "Making terrible you should leave a comment if decisions with confidence"
+    "{i1} in the most hilariously unexpected ways 😂 - what's your weirdest {i1} story?",
+    "turning {i2} into comedy gold somehow - I have a gift! - please tell me you relate 😅",
+    "finding the humor in {i1} situations that others miss - am I the only one who thinks this?",
+    "making {i2} way more entertaining than it should be in {city} - what's your take on this madness?",
+    "being confidently chaotic about {i1} - is this too chaotic for you? 🤪"
   ],
   "romantic": [
-    "Creating beautiful you should leave a comment if moments together",
-    "How you should leave a comment if brings out our best selves",
-    "Building something meaningful through you should leave a comment if",
-    "The way you should leave a comment if makes everything feel magical",
-    "Finding deep connection in you should leave a comment if experiences"
+    "sharing {i1} with someone who truly gets it ❤️ - what makes your heart skip a beat?",
+    "creating beautiful {i2} moments together in {city} - does this sound like your love language too? ❤️",
+    "finding deep connection through {i1} experiences - what's your idea of the perfect moment?",
+    "making {i2} feel magical and special with the right person - would you want to experience this together?",
+    "building intimacy around shared {i1} passions - what makes you feel most loved?"
   ],
   "adventurous": [
-    "Exploring you should leave a comment if territories nobody's discovered",
-    "Turning you should leave a comment if into epic adventures",
-    "Pushing you should leave a comment if boundaries fearlessly",
-    "Making you should leave a comment if spontaneous and thrilling",
-    "Conquering you should leave a comment if challenges together"
+    "exploring {i1} in wild new ways 🌟 - what's on your bucket list?",
+    "turning {i2} into spontaneous adventures from {city} - want to be my adventure buddy? 🌟",
+    "taking {i1} to the next level - who's coming with me? - what's the wildest thing you've done?",
+    "discovering {i2} possibilities everywhere I go - where should we explore first?",
+    "making {i1} part of my best travel stories - ready for some spontaneous fun?"
   ],
   "quirky": [
-    "My wonderfully weird you should leave a comment if perspective",
-    "The strange way I approach you should leave a comment if",
-    "My peculiar you should leave a comment if theories that actually work",
-    "How I see you should leave a comment if patterns others miss",
-    "My unusual you should leave a comment if methods that fascinate people"
+    "{i1} in wonderfully weird ways 🤪 - too weird for you or just weird enough? 🤪",
+    "finding unique perspectives on {i2} that others miss - what's your strangest obsession?",
+    "appreciating the strange details of {i1} in {city} - embrace the weird with me?",
+    "celebrating the oddness of {i2} - embrace the weird! - what makes you wonderfully different?",
+    "having unconventional {i1} experiences that make great stories - ready to be delightfully odd together?"
   ],
   "serious": [
-    "Building you should leave a comment if character through consistent effort",
-    "How you should leave a comment if has shaped my core values",
-    "Developing you should leave a comment if discipline that creates results",
-    "The meaningful impact you should leave a comment if has on growth",
-    "How you should leave a comment if challenges have built my resilience"
+    "approaching {i1} with genuine intention and purpose - what drives your personal growth?",
+    "growing through {i2} challenges that shape who I am - how do you stay motivated?",
+    "building discipline around {i1} to achieve my goals - what's your biggest life lesson?",
+    "creating meaningful {i2} impact in {city} and beyond - what matters most to you?",
+    "mastering the fundamentals of {i1} with dedication - how do you define success?"
   ],
   "intellectual": [
-    "The fascinating complexity underlying you should leave a comment if",
-    "How you should leave a comment if theory connects to deeper questions",
-    "The analytical framework I use for you should leave a comment if",
-    "How you should leave a comment if challenges conventional wisdom",
-    "The research behind you should leave a comment if that's groundbreaking"
+    "analyzing {i1} from multiple angles 🧠 - what's your perspective on this? 🧠",
+    "understanding the deeper theory behind {i2} - want to dive deeper into this topic?",
+    "researching {i1} extensively - what have - what have you learned recently?",
+    "connecting {i2} to bigger philosophical concepts - challenge my thinking on this?",
+    "exploring the complexity of {i1} in our modern world - what fascinates you most?"
   ],
   "default": [
-    "The genuine passion I have for you should leave a comment if",
-    "How you should leave a comment if brings authentic joy to life",
-    "My natural enthusiasm for you should leave a comment if",
-    "The way you should leave a comment if makes me feel most myself",
-    "How you should leave a comment if connects me to what matters"
+    "enjoying {i1} authentically every day ✨ - what brings you joy?",
+    "sharing my {i2} passion with others in {city} - what's your version of this? ✨",
+    "experiencing {i1} fully and mindfully - how do you make life meaningful?",
+    "appreciating the beauty in {i2} moments - what's your passion?",
+    "living {i1} genuinely and inspiring others to do the same - what makes you feel alive?"
   ]
 };
 

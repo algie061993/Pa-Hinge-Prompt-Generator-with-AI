@@ -1,52 +1,52 @@
 const aLifeGoalOfMine = {
   "funny": [
-    "Being hilariously bad at a life goal of mine and owning it",
-    "Making a life goal of mine disasters into comedy gold",
-    "Why overthinking a life goal of mine is actually an art form",
-    "How to turn a life goal of mine awkwardness into charm",
-    "Making terrible a life goal of mine decisions with confidence"
+    "is to master {i1} without Googling it every five minutes 😏 - what's your weirdest {i1} story?",
+    "is becoming a professional {i2} critic - someone's gotta do it, right? - please tell me you relate 😅",
+    "is to perfect my 'I'm totally listening' face during {i1} conversations 🎭 - am I the only one who thinks this?",
+    "is learning to adult in {city} without having a mental breakdown daily - what's your take on this madness?",
+    "is to become fluent in {i1} sarcasm... oh wait, already there 💅 - is this too chaotic for you? 🤪"
   ],
   "romantic": [
-    "Creating beautiful a life goal of mine moments together",
-    "How a life goal of mine brings out our best selves",
-    "Building something meaningful through a life goal of mine",
-    "The way a life goal of mine makes everything feel magical",
-    "Finding deep connection in a life goal of mine experiences"
+    "is finding someone who loves {i1} as much as I do ❤️ Could that be - what makes your heart skip a beat?",
+    "is building a love story worth telling our grandkids about in {city} - does this sound like your love language too? ❤️",
+    "is creating magical {i2} moments with someone special - interested? - what's your idea of the perfect moment?",
+    "is finding my person and exploring {i1} together, hand in hand 🌟 - would you want to experience this together?",
+    "is learning to love deeply through shared {i2} adventures - what makes you feel most loved?"
   ],
   "adventurous": [
-    "Exploring a life goal of mine territories nobody's discovered",
-    "Turning a life goal of mine into epic adventures",
-    "Pushing a life goal of mine boundaries fearlessly",
-    "Making a life goal of mine spontaneous and thrilling",
-    "Conquering a life goal of mine challenges together"
+    "is backpacking through every {i1} destination before I'm 40 🌍 - what's on your bucket list?",
+    "is mastering {i2} in the wildest places possible - want to be my adventure buddy? 🌟",
+    "is road-tripping from {city} to everywhere with good music and {i1} - what's the wildest thing you've done?",
+    "is climbing mountains and conquering {i2} fears, one peak at a time - where should we explore first?",
+    "is collecting passport stamps and {i1} stories from around the globe - ready for some spontaneous fun?"
   ],
   "quirky": [
-    "My wonderfully weird a life goal of mine perspective",
-    "The strange way I approach a life goal of mine",
-    "My peculiar a life goal of mine theories that actually work",
-    "How I see a life goal of mine patterns others miss",
-    "My unusual a life goal of mine methods that fascinate people"
+    "is to own a {i1} shop with a secret speakeasy in the back 📚🍸 - too weird for you or just weird enough? 🤪",
+    "is learning to communicate with my {i2} (they're great listeners) - what's your strangest obsession?",
+    "is becoming the person with the perfect weird {i1} fact for any situation - embrace the weird with me?",
+    "is to master {i2} without having a mental breakdown - wish me luck! - what makes you wonderfully different?",
+    "is collecting vintage {i1} from places I've never been... yet 🗺️ - ready to be delightfully odd together?"
   ],
   "serious": [
-    "Building a life goal of mine character through consistent effort",
-    "How a life goal of mine has shaped my core values",
-    "Developing a life goal of mine discipline that creates results",
-    "The meaningful impact a life goal of mine has on growth",
-    "How a life goal of mine challenges have built my resilience"
+    "is making a meaningful impact through {i1} in my community - what drives your personal growth?",
+    "is building financial independence so I can pursue {i2} full-time - how do you stay motivated?",
+    "is developing emotional intelligence through {i1} and genuine connections - what's your biggest life lesson?",
+    "is creating a {i2} legacy that extends beyond just professional achievements - what matters most to you?",
+    "is learning to balance {i1} ambition with genuine happiness - how do you define success?"
   ],
   "intellectual": [
-    "The fascinating complexity underlying a life goal of mine",
-    "How a life goal of mine theory connects to deeper questions",
-    "The analytical framework I use for a life goal of mine",
-    "How a life goal of mine challenges conventional wisdom",
-    "The research behind a life goal of mine that's groundbreaking"
+    "is understanding the intersection of {i1} and human psychology 🧠 - what's your perspective on this? 🧠",
+    "is reading everything about {i2} that challenges my worldview - want to dive deeper into this topic?",
+    "is learning {i1} to expand my perspective - what are - what have you learned recently?",
+    "is exploring the philosophy behind what makes {i2} truly meaningful - challenge my thinking on this?",
+    "is mastering critical thinking in our {i1}-saturated world - what fascinates you most?"
   ],
   "default": [
-    "The genuine passion I have for a life goal of mine",
-    "How a life goal of mine brings authentic joy to life",
-    "My natural enthusiasm for a life goal of mine",
-    "The way a life goal of mine makes me feel most myself",
-    "How a life goal of mine connects me to what matters"
+    "is living authentically through {i1} and inspiring others ✨ - what brings you joy?",
+    "is finding the perfect balance between {i2} and contentment - what's your version of this? ✨",
+    "is creating meaningful {i1} connections with people who 'get' me - how do you make life meaningful?",
+    "is turning my {i2} passion into something that makes a difference - what's your passion?",
+    "is building a life in {city} I'm genuinely excited to wake up to - what makes you feel alive?"
   ]
 };
 

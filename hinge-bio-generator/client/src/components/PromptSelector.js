@@ -233,7 +233,7 @@ const PromptSelector = ({ userParams, formActive, onClose }) => {
             <div className="user-params-display">
               <h3>Your Profile</h3>
               <p>
-                {results.userParams.age} years old • {results.userParams.location} • {results.userParams.desiredVibe} vibe
+                {results.userParams.location} • {results.userParams.desiredVibe} vibe
               </p>
               <div className="interests-display">
                 {results.userParams.keyInterests?.map((interest) => (

@@ -5,9 +5,9 @@ const tryAI = async (prompt, userParams) => {
   if (!process.env.HUGGINGFACE_API_KEY) return null;
   
   try {
-    const { age, location, keyInterests, desiredVibe, tone, gender } = userParams;
+    const { location, keyInterests, desiredVibe, tone, gender } = userParams;
     const aiPrompt = `Write a Hinge bio answer for: "${prompt}"
-Profile: ${age}yo ${gender}, ${location}, loves ${keyInterests?.join(' & ')}, ${desiredVibe}, ${tone}
+Profile: ${gender}, ${location}, loves ${keyInterests?.join(' & ')}, ${desiredVibe}, ${tone}
 Rules: Natural, 1-2 sentences, show personality`;
     
     const response = await axios.post(

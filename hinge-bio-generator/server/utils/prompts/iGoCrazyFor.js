@@ -1,52 +1,52 @@
 const iGoCrazyFor = {
   "funny": [
-    "Really good {i1} that's done exactly right",
-    "People who are passionate about weird {i2} stuff",
-    "When someone shares my random {i1} obsessions",
-    "Perfect {i2} that makes me lose all self-control",
-    "Finding someone who gets excited about {i1} with me"
+    "people who can quote {i1} references at the perfect moment 📺 - what's your weirdest {i1} story?",
+    "{i2} enthusiasts who think they're experts but are adorably wrong - please tell me you relate 😅",
+    "the smell of coffee and the sound of {i1} on windows ☕ - am I the only one who thinks this?",
+    "finding the perfect {i2} meme to send at 2am - relatable? - what's your take on this madness?",
+    "people in {city} who get genuinely excited about {i1} - is this too chaotic for you? 🤪"
   ],
   "romantic": [
-    "Deep conversations about {i1} that last for hours",
-    "When someone shares my genuine passion for {i2}",
-    "Those rare moments of perfect {i1} connection",
-    "Finding someone who gets excited about {i2} with me",
-    "The way {i1} brings people together beautifully"
+    "handwritten notes about {i1} and unexpected flowers 💐 - what makes your heart skip a beat?",
+    "slow dancing in the kitchen while {i2} plays - does this sound like your love language too? ❤️",
+    "the way someone's eyes light up when they talk about {i1} ✨ - what's your idea of the perfect moment?",
+    "stolen glances during {i2} moments in {city} - would you want to experience this together?",
+    "morning coffee together while discussing {i1} in comfortable silence - what makes you feel most loved?"
   ],
   "adventurous": [
-    "Discovering hidden {i1} gems in {city}",
-    "Spontaneous {i2} adventures that weren't planned",
-    "That rush of trying {i1} for the first time",
-    "Epic {i2} experiences that change everything",
-    "Exploring uncharted {i1} possibilities"
+    "spontaneous {i1} road trips with no destination in mind 🚗 - what's on your bucket list?",
+    "trying {i2} in foreign countries - want to be my adventure buddy? 🌟",
+    "hiking trails in {city} that lead to breathtaking {i1} views - what's the wildest thing you've done?",
+    "midnight {i2} adventures under starry skies - where should we explore first?",
+    "saying yes to {i1} that scare me a little - ready for some spontaneous fun?"
   ],
   "quirky": [
-    "Obscure {i1} facts that blow my mind",
-    "The strange side of {i2} culture most people don't know",
-    "Finding someone who appreciates my {i1} knowledge",
-    "The bizarre {i2} connections I discover",
-    "Why {i1} is actually the most fascinating thing ever"
+    "vintage {i1} records and the stories behind them 🎵 - too weird for you or just weird enough? 🤪",
+    "{i2} shops with cats and hidden reading nooks in {city} - what's your strangest obsession?",
+    "people who collect {i1} - embrace the weird with me?",
+    "late-night philosophical conversations about {i2} - what makes you wonderfully different?",
+    "finding four-leaf clovers and making {i1} wishes 🍀 - ready to be delightfully odd together?"
   ],
   "serious": [
-    "Excellence in {i1} and the dedication it requires",
-    "Meaningful progress in {i2} that creates lasting impact",
-    "The pursuit of {i1} mastery regardless of how long it takes",
-    "How {i2} challenges have shaped my character",
-    "The deeper meaning behind {i1} that most people miss"
+    "meaningful {i1} conversations that last until sunrise - what drives your personal growth?",
+    "people passionate about making a difference through {i2} - how do you stay motivated?",
+    "the feeling of personal growth from {i1} challenges - what's your biggest life lesson?",
+    "authentic {i2} connections that go beyond surface level - what matters most to you?",
+    "moments of genuine vulnerability during {i1} experiences - how do you define success?"
   ],
   "intellectual": [
-    "The philosophy behind {i1} and why it works",
-    "Complex {i2} theories that challenge conventional wisdom",
-    "The cutting-edge developments in {i1} that excite me",
-    "How {i2} connects to everything in unexpected ways",
-    "The theoretical implications of {i1} that intrigue me"
+    "{i1} documentaries that completely change my perspective 🧠 - what's your perspective on this? 🧠",
+    "debates about {i2} that challenge my existing beliefs - want to dive deeper into this topic?",
+    "learning something new about {i1} that connects to everything else - what have you learned recently?",
+    "{i2} books that make me question everything I thought I knew - challenge my thinking on this?",
+    "conversations with people smarter than me about {i1} - what fascinates you most?"
   ],
   "default": [
-    "Really good {i1} that's done with passion",
-    "Perfect {i2} spots in {city} with the right vibe",
-    "When someone shares my enthusiasm for {i1}",
-    "Discovering new {i2} experiences that blow my mind",
-    "The perfect combination of {i1} and good company"
+    "genuine laughter and people who love {i1} as much as I do 😊 - what brings you joy?",
+    "{i2} views and golden hour photography in {city} - what's your version of this? ✨",
+    "the perfect {i1} playlist for any mood or moment - how do you make life meaningful?",
+    "cozy nights in with good company and {i2} - what's your passion?",
+    "finding beauty in everyday {i1} moments - what makes you feel alive?"
   ]
 };
 

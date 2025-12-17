@@ -1,52 +1,52 @@
 const myTherapistWouldSayI = {
   "funny": [
-    "Being hilariously bad at my therapist would say i and owning it",
-    "Making my therapist would say i disasters into comedy gold",
-    "Why overthinking my therapist would say i is actually an art form",
-    "How to turn my therapist would say i awkwardness into charm",
-    "Making terrible my therapist would say i decisions with confidence"
+    "{i1} in the most hilariously unexpected ways 😂 - what's your weirdest {i1} story?",
+    "turning {i2} into comedy gold somehow - I have a gift! - please tell me you relate 😅",
+    "finding the humor in {i1} situations that others miss - am I the only one who thinks this?",
+    "making {i2} way more entertaining than it should be in {city} - what's your take on this madness?",
+    "being confidently chaotic about {i1} - is this too chaotic for you? 🤪"
   ],
   "romantic": [
-    "Creating beautiful my therapist would say i moments together",
-    "How my therapist would say i brings out our best selves",
-    "Building something meaningful through my therapist would say i",
-    "The way my therapist would say i makes everything feel magical",
-    "Finding deep connection in my therapist would say i experiences"
+    "sharing {i1} with someone who truly gets it ❤️ - what makes your heart skip a beat?",
+    "creating beautiful {i2} moments together in {city} - does this sound like your love language too? ❤️",
+    "finding deep connection through {i1} experiences - what's your idea of the perfect moment?",
+    "making {i2} feel magical and special with the right person - would you want to experience this together?",
+    "building intimacy around shared {i1} passions - what makes you feel most loved?"
   ],
   "adventurous": [
-    "Exploring my therapist would say i territories nobody's discovered",
-    "Turning my therapist would say i into epic adventures",
-    "Pushing my therapist would say i boundaries fearlessly",
-    "Making my therapist would say i spontaneous and thrilling",
-    "Conquering my therapist would say i challenges together"
+    "exploring {i1} in wild new ways 🌟 - what's on your bucket list?",
+    "turning {i2} into spontaneous adventures from {city} - want to be my adventure buddy? 🌟",
+    "taking {i1} to the next level - who's coming with me? - what's the wildest thing you've done?",
+    "discovering {i2} possibilities everywhere I go - where should we explore first?",
+    "making {i1} part of my best travel stories - ready for some spontaneous fun?"
   ],
   "quirky": [
-    "My wonderfully weird my therapist would say i perspective",
-    "The strange way I approach my therapist would say i",
-    "My peculiar my therapist would say i theories that actually work",
-    "How I see my therapist would say i patterns others miss",
-    "My unusual my therapist would say i methods that fascinate people"
+    "{i1} in wonderfully weird ways 🤪 - too weird for you or just weird enough? 🤪",
+    "finding unique perspectives on {i2} that others miss - what's your strangest obsession?",
+    "appreciating the strange details of {i1} in {city} - embrace the weird with me?",
+    "celebrating the oddness of {i2} - embrace the weird! - what makes you wonderfully different?",
+    "having unconventional {i1} experiences that make great stories - ready to be delightfully odd together?"
   ],
   "serious": [
-    "Building my therapist would say i character through consistent effort",
-    "How my therapist would say i has shaped my core values",
-    "Developing my therapist would say i discipline that creates results",
-    "The meaningful impact my therapist would say i has on growth",
-    "How my therapist would say i challenges have built my resilience"
+    "approaching {i1} with genuine intention and purpose - what drives your personal growth?",
+    "growing through {i2} challenges that shape who I am - how do you stay motivated?",
+    "building discipline around {i1} to achieve my goals - what's your biggest life lesson?",
+    "creating meaningful {i2} impact in {city} and beyond - what matters most to you?",
+    "mastering the fundamentals of {i1} with dedication - how do you define success?"
   ],
   "intellectual": [
-    "The fascinating complexity underlying my therapist would say i",
-    "How my therapist would say i theory connects to deeper questions",
-    "The analytical framework I use for my therapist would say i",
-    "How my therapist would say i challenges conventional wisdom",
-    "The research behind my therapist would say i that's groundbreaking"
+    "analyzing {i1} from multiple angles 🧠 - what's your perspective on this? 🧠",
+    "understanding the deeper theory behind {i2} - want to dive deeper into this topic?",
+    "researching {i1} extensively - what have - what have you learned recently?",
+    "connecting {i2} to bigger philosophical concepts - challenge my thinking on this?",
+    "exploring the complexity of {i1} in our modern world - what fascinates you most?"
   ],
   "default": [
-    "The genuine passion I have for my therapist would say i",
-    "How my therapist would say i brings authentic joy to life",
-    "My natural enthusiasm for my therapist would say i",
-    "The way my therapist would say i makes me feel most myself",
-    "How my therapist would say i connects me to what matters"
+    "enjoying {i1} authentically every day ✨ - what brings you joy?",
+    "sharing my {i2} passion with others in {city} - what's your version of this? ✨",
+    "experiencing {i1} fully and mindfully - how do you make life meaningful?",
+    "appreciating the beauty in {i2} moments - what's your passion?",
+    "living {i1} genuinely and inspiring others to do the same - what makes you feel alive?"
   ]
 };
 
