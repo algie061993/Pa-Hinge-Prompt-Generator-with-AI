@@ -6,13 +6,13 @@ import { FiSend, FiLoader, FiX } from "react-icons/fi";
 const HINGE_PROMPTS = {
   "About Me": [
     "This year, I really want to",
-    "My greatest strength", 
+    "My greatest strength",
     "I go crazy for",
     "Typical Sunday",
     "My simple pleasures",
     "My most irrational fear",
     "I recently discovered that",
-    "A life goal of mine"
+    "A life goal of mine",
   ],
   "Getting Personal": [
     "My Love Language is",
@@ -21,7 +21,7 @@ const HINGE_PROMPTS = {
     "The key to my heart is",
     "I geek out on",
     "Dating me is like",
-    "The way to win me over is"
+    "The way to win me over is",
   ],
   "My Type": [
     "We're the same type of weird if",
@@ -34,7 +34,7 @@ const HINGE_PROMPTS = {
     "We'll get along if",
     "Something that's non-negotiable for me is",
     "All I ask is that you",
-    "I'd fall for you if"
+    "I'd fall for you if",
   ],
   "Date Vibes": [
     "First round is on me if",
@@ -42,7 +42,7 @@ const HINGE_PROMPTS = {
     "Together, we could",
     "What I order for the table",
     "Let's debate this topic",
-    "I bet you can't"
+    "I bet you can't",
   ],
   "Let's Chat About Prompts": [
     "Change my mind about",
@@ -53,7 +53,7 @@ const HINGE_PROMPTS = {
     "I'll pick the topic if you start the conversation",
     "The one thing I'd love to know about you is",
     "Let's make sure we're on the same page about",
-    "Do you agree or disagree that"
+    "Do you agree or disagree that",
   ],
   "Self-care Prompts": [
     "My friends ask me for advice about",
@@ -67,8 +67,8 @@ const HINGE_PROMPTS = {
     "I beat my blues by",
     "When I need advice, I go to",
     "My therapist would say I",
-    "The last time I cried happy tears was"
-  ]
+    "The last time I cried happy tears was",
+  ],
 };
 
 const PromptSelector = ({ userParams, formActive, onClose }) => {
@@ -82,9 +82,9 @@ const PromptSelector = ({ userParams, formActive, onClose }) => {
 
   const handlePromptToggle = (prompt) => {
     if (selectedPrompts.includes(prompt)) {
-      setSelectedPrompts(prev => prev.filter(p => p !== prompt));
+      setSelectedPrompts((prev) => prev.filter((p) => p !== prompt));
     } else if (selectedPrompts.length < 3) {
-      setSelectedPrompts(prev => [...prev, prompt]);
+      setSelectedPrompts((prev) => [...prev, prompt]);
     }
     setResults(null);
     setError("");
@@ -123,8 +123,10 @@ const PromptSelector = ({ userParams, formActive, onClose }) => {
     <div className="prompt-selector-container">
       <div className="prompt-selector">
         <h2>Generate Hinge Prompt Answers</h2>
-        <p className="prompt-subtitle">Select up to 3 prompts to generate personalized answers</p>
-        
+        <p className="prompt-subtitle">
+          Select up to 3 prompts to generate personalized answers
+        </p>
+
         <div className="ai-status available">
           <span>⚡ Fast Templates</span>
         </div>
@@ -133,7 +135,9 @@ const PromptSelector = ({ userParams, formActive, onClose }) => {
           {Object.keys(HINGE_PROMPTS).map((category) => (
             <button
               key={category}
-              className={`category-tab ${selectedCategory === category ? "active" : ""}`}
+              className={`category-tab ${
+                selectedCategory === category ? "active" : ""
+              }`}
               onClick={() => setSelectedCategory(category)}
             >
               {category}
@@ -148,10 +152,15 @@ const PromptSelector = ({ userParams, formActive, onClose }) => {
                 type="checkbox"
                 checked={selectedPrompts.includes(prompt)}
                 onChange={() => handlePromptToggle(prompt)}
-                disabled={selectedPrompts.length >= 3 && !selectedPrompts.includes(prompt)}
+                disabled={
+                  selectedPrompts.length >= 3 &&
+                  !selectedPrompts.includes(prompt)
+                }
               />
               <span className="prompt-text">{prompt}</span>
-              {selectedPrompts.includes(prompt) && <span className="prompt-selected">✓</span>}
+              {selectedPrompts.includes(prompt) && (
+                <span className="prompt-selected">✓</span>
+              )}
             </label>
           ))}
         </div>
@@ -187,23 +196,47 @@ const PromptSelector = ({ userParams, formActive, onClose }) => {
             <FiLoader className="spinner" /> Generating answers...
           </div>
         )}
-        
+
         {results && (
           <div className="prompt-results">
             <div className="results-header">
               <h2>Your Hinge Prompt Answers</h2>
-              <button className="btn-clear-results" onClick={handleClearSelection} title="Clear">
+              <button
+                className="btn-clear-results"
+                onClick={handleClearSelection}
+                title="Clear"
+              >
                 <FiX />
               </button>
             </div>
 
             {results.metadata && (
               <div className="source-stats">
-                {Object.values(results.metadata).filter(m => m.source === 'AI').length > 0 && (
-                  <span className="stat-item ai">🤖 {Object.values(results.metadata).filter(m => m.source === 'AI').length} AI-generated</span>
+                {Object.values(results.metadata).filter(
+                  (m) => m.source === "AI"
+                ).length > 0 && (
+                  <span className="stat-item ai">
+                    🤖{" "}
+                    {
+                      Object.values(results.metadata).filter(
+                        (m) => m.source === "AI"
+                      ).length
+                    }{" "}
+                    AI-generated
+                  </span>
                 )}
-                {Object.values(results.metadata).filter(m => m.source === 'Template').length > 0 && (
-                  <span className="stat-item">✨ {Object.values(results.metadata).filter(m => m.source === 'Template').length} Template</span>
+                {Object.values(results.metadata).filter(
+                  (m) => m.source === "Template"
+                ).length > 0 && (
+                  <span className="stat-item">
+                    ✨{" "}
+                    {
+                      Object.values(results.metadata).filter(
+                        (m) => m.source === "Template"
+                      ).length
+                    }{" "}
+                    Template
+                  </span>
                 )}
               </div>
             )}
@@ -214,13 +247,26 @@ const PromptSelector = ({ userParams, formActive, onClose }) => {
                   <div className="answer-card-header">
                     <h3 className="prompt-question">{prompt}</h3>
                     <span className="source-badge">
-                      {results.metadata?.[prompt]?.source === 'AI' ? '🤖' : '✨'}
+                      {results.metadata?.[prompt]?.source === "AI"
+                        ? "🤖"
+                        : "✨"}
                     </span>
+                    {results.metadata?.[prompt]?.mappedPromptKey &&
+                      results.metadata?.[prompt]?.mappedPromptKey !==
+                        prompt && (
+                        <div className="mapped-key">
+                          from: {results.metadata[prompt].mappedPromptKey}
+                        </div>
+                      )}
                   </div>
                   <div className="answer-display">
                     <div
                       className="answer-text"
-                      onClick={() => navigator.clipboard.writeText(results.promptAnswers[prompt])}
+                      onClick={() =>
+                        navigator.clipboard.writeText(
+                          results.promptAnswers[prompt]
+                        )
+                      }
                       title="Click to copy"
                     >
                       {results.promptAnswers[prompt]}
@@ -233,11 +279,14 @@ const PromptSelector = ({ userParams, formActive, onClose }) => {
             <div className="user-params-display">
               <h3>Your Profile</h3>
               <p>
-                {results.userParams.location} • {results.userParams.desiredVibe} vibe
+                {results.userParams.location} • {results.userParams.desiredVibe}{" "}
+                vibe
               </p>
               <div className="interests-display">
                 {results.userParams.keyInterests?.map((interest) => (
-                  <span key={interest} className="interest-badge">{interest}</span>
+                  <span key={interest} className="interest-badge">
+                    {interest}
+                  </span>
                 ))}
               </div>
             </div>
