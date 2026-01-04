@@ -1,0 +1,18 @@
+const idFallForYouIf = {
+  "funny": [
+    ],
+  "romantic": [
+    ],
+  "adventurous": [
+    ],
+  "quirky": [
+    ],
+  "serious": [
+    ],
+  "intellectual": [
+    ],
+  "default": [
+    ]
+};
+
+module.exports = idFallForYouIf;

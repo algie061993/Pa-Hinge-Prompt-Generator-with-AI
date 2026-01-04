@@ -1,0 +1,18 @@
+const youShouldLeaveACommentIf = {
+  funny: [
+    ],
+  romantic: [
+    ],
+  adventurous: [
+    ],
+  quirky: [
+    ],
+  serious: [
+    ],
+  intellectual: [
+    ],
+  default: [
+    ],
+};
+
+module.exports = youShouldLeaveACommentIf;

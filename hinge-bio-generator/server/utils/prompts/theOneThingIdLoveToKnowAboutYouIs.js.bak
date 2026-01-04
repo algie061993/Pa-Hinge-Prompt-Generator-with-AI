@@ -1,0 +1,18 @@
+const theOneThingIdLoveToKnowAboutYouIs = {
+  funny: [
+    "being confidently chaotic about {i1} - is this too chaotic for you? 🤪"],
+  romantic: [
+    ],
+  adventurous: [
+    "taking {i1} to the next level - who's coming with me? - what's the wildest thing you've done?"],
+  quirky: [
+    ],
+  serious: [
+    ],
+  intellectual: [
+    ],
+  default: [
+    ],
+};
+
+module.exports = theOneThingIdLoveToKnowAboutYouIs;

@@ -1,0 +1,18 @@
+const iWantSomeoneWho = {
+  "funny": [
+    ],
+  "romantic": [
+    "sharing {i1} with someone who truly gets it ❤️ - what makes your heart skip a beat?"],
+  "adventurous": [
+    ],
+  "quirky": [
+    ],
+  "serious": [
+    ],
+  "intellectual": [
+    ],
+  "default": [
+    ]
+};
+
+module.exports = iWantSomeoneWho;

@@ -1,0 +1,18 @@
+const wereTheSameTypeOfWeirdIf = {
+  funny: [
+    ],
+  romantic: [
+    ],
+  adventurous: [
+    ],
+  quirky: [
+    "appreciating the strange details of {i1} in {city} - embrace the weird with me?"],
+  serious: [
+    ],
+  intellectual: [
+    ],
+  default: [
+    ],
+};
+
+module.exports = wereTheSameTypeOfWeirdIf;

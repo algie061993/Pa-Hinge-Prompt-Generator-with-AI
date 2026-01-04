@@ -1,0 +1,18 @@
+const datingMeIsLike = {
+  "funny": [
+    ],
+  "romantic": [
+    ],
+  "adventurous": [
+    ],
+  "quirky": [
+    ],
+  "serious": [
+    ],
+  "intellectual": [
+    ],
+  "default": [
+    ]
+};
+
+module.exports = datingMeIsLike;

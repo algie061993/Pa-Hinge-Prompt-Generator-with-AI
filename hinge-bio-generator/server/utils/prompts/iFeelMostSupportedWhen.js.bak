@@ -1,0 +1,19 @@
+const iFeelMostSupportedWhen = {
+  "funny": [
+    ],
+  "romantic": [
+    "building intimacy around shared {i1} passions - what makes you feel most loved?"
+  ],
+  "adventurous": [
+    ],
+  "quirky": [
+    ],
+  "serious": [
+    ],
+  "intellectual": [
+    ],
+  "default": [
+    ]
+};
+
+module.exports = iFeelMostSupportedWhen;

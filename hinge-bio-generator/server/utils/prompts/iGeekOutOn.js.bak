@@ -1,0 +1,18 @@
+const iGeekOutOn = {
+  "funny": [
+    ],
+  "romantic": [
+    ],
+  "adventurous": [
+    ],
+  "quirky": [
+    ],
+  "serious": [
+    ],
+  "intellectual": [
+    ],
+  "default": [
+    ]
+};
+
+module.exports = iGeekOutOn;

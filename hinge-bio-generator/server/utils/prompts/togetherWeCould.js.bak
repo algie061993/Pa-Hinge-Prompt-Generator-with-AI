@@ -1,0 +1,18 @@
+const togetherWeCould = {
+  funny: [
+    ],
+  romantic: [
+    ],
+  adventurous: [
+    ],
+  quirky: [
+    ],
+  serious: [
+    ],
+  intellectual: [
+    ],
+  default: [
+    ],
+};
+
+module.exports = togetherWeCould;

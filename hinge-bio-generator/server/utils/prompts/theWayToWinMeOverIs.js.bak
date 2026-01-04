@@ -1,0 +1,18 @@
+const theWayToWinMeOverIs = {
+  funny: [
+    ],
+  romantic: [
+    ],
+  adventurous: [
+    ],
+  quirky: [
+    ],
+  serious: [
+    ],
+  intellectual: [
+    ],
+  default: [
+    ],
+};
+
+module.exports = theWayToWinMeOverIs;

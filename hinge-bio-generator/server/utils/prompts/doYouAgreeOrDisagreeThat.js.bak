@@ -1,0 +1,18 @@
+const doYouAgreeOrDisagreeThat = {
+  "funny": [
+    ],
+  "romantic": [
+    ],
+  "adventurous": [
+    ],
+  "quirky": [
+    "{i1} in wonderfully weird ways 🤪 - too weird for you or just weird enough? 🤪"],
+  "serious": [
+    ],
+  "intellectual": [
+    ],
+  "default": [
+    "experiencing {i1} fully and mindfully - how do you make life meaningful?"]
+};
+
+module.exports = doYouAgreeOrDisagreeThat;

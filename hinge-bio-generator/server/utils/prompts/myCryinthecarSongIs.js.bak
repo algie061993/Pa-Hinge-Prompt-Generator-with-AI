@@ -1,0 +1,18 @@
+const myCryinthecarSongIs = {
+  "funny": [
+    ],
+  "romantic": [
+    ],
+  "adventurous": [
+    ],
+  "quirky": [
+    ],
+  "serious": [
+    ],
+  "intellectual": [
+    ],
+  "default": [
+    ]
+};
+
+module.exports = myCryinthecarSongIs;

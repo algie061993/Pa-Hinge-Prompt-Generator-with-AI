@@ -1,0 +1,18 @@
+const myLastJournalEntryWasAbout = {
+  "funny": [
+    ],
+  "romantic": [
+    ],
+  "adventurous": [
+    ],
+  "quirky": [
+    ],
+  "serious": [
+    ],
+  "intellectual": [
+    ],
+  "default": [
+    ]
+};
+
+module.exports = myLastJournalEntryWasAbout;

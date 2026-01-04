@@ -1,0 +1,18 @@
+const whenINeedAdviceIGoTo = {
+  funny: [
+    ],
+  romantic: [
+    ],
+  adventurous: [
+    "discovering {i2} possibilities everywhere I go - where should we explore first?"],
+  quirky: [
+    ],
+  serious: [
+    ],
+  intellectual: [
+    ],
+  default: [
+    ],
+};
+
+module.exports = whenINeedAdviceIGoTo;

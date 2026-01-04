@@ -1,0 +1,18 @@
+const somethingThatsNonNegotiableForMeIs = {
+  funny: [
+    ],
+  romantic: [
+    ],
+  adventurous: [
+    ],
+  quirky: [
+    ],
+  serious: [
+    ],
+  intellectual: [
+    ],
+  default: [
+    ],
+};
+
+module.exports = somethingThatsNonNegotiableForMeIs;

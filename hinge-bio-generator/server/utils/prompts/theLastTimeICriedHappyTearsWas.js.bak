@@ -1,0 +1,18 @@
+const theLastTimeICriedHappyTearsWas = {
+  funny: [
+    ],
+  romantic: [
+    ],
+  adventurous: [
+    ],
+  quirky: [
+    ],
+  serious: [
+    ],
+  intellectual: [
+    ],
+  default: [
+    ],
+};
+
+module.exports = theLastTimeICriedHappyTearsWas;

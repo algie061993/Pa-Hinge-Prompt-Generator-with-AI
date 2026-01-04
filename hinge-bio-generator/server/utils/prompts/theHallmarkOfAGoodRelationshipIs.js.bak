@@ -1,0 +1,18 @@
+const theHallmarkOfAGoodRelationshipIs = {
+  funny: [
+    ],
+  romantic: [
+    ],
+  adventurous: [
+    ],
+  quirky: [
+    ],
+  serious: [
+    ],
+  intellectual: [
+    ],
+  default: [
+    ],
+};
+
+module.exports = theHallmarkOfAGoodRelationshipIs;

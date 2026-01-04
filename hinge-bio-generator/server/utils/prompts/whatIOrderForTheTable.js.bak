@@ -1,0 +1,18 @@
+const whatIOrderForTheTable = {
+  funny: [
+    ],
+  romantic: [
+    ],
+  adventurous: [
+    ],
+  quirky: [
+    ],
+  serious: [
+    "approaching {i1} with genuine intention and purpose - what drives your personal growth?"],
+  intellectual: [
+    ],
+  default: [
+    ],
+};
+
+module.exports = whatIOrderForTheTable;

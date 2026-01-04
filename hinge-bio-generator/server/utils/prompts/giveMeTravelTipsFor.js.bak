@@ -1,0 +1,19 @@
+const giveMeTravelTipsFor = {
+  "funny": [
+    ],
+  "romantic": [
+    ],
+  "adventurous": [
+    "making {i1} part of my best travel stories - ready for some spontaneous fun?"
+  ],
+  "quirky": [
+    ],
+  "serious": [
+    ],
+  "intellectual": [
+    ],
+  "default": [
+    ]
+};
+
+module.exports = giveMeTravelTipsFor;
