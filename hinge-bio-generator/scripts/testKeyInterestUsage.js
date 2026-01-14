@@ -9,15 +9,9 @@ const { generateAnswers } = require("../server/utils/generator");
       "My Love Language is ",
     ];
 
-    const i1 = "hiking";
-    const i2 = "gaming";
-
     const r = await generateAnswers(
       {
-        location: "United Kingdom",
-        keyInterests: [i1, i2],
         desiredVibe: "funny",
-        tone: "light",
       },
       selectedPrompts
     );
@@ -26,14 +20,16 @@ const { generateAnswers } = require("../server/utils/generator");
       (a || "").toLowerCase()
     );
 
-    // At least one answer should mention i1 or i2
-    const found = answers.some((a) => a.includes(i1) || a.includes(i2));
-    assert(
-      found,
-      `Expected at least one generated answer to mention '${i1}' or '${i2}'`
-    );
+    // Ensure answers are short and do not contain question marks
+    answers.forEach((a) => {
+      assert(
+        !a.includes("?"),
+        `Answer should not contain question marks: ${a}`
+      );
+      assert(a.split(" ").length <= 20, `Answer is too long: ${a}`);
+    });
 
-    console.log("PASS: Key interest usage test passed");
+    console.log("PASS: Vibe-based generation test passed");
     process.exit(0);
   } catch (err) {
     console.error("FAIL:", err && err.message ? err.message : err);

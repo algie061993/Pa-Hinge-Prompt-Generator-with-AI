@@ -76,55 +76,45 @@ const callHF = async (promptText, vibe, count) => {
   }
 };
 
-const synthTemplate = (
-  promptText,
-  vibe,
-  i1 = "new experiences",
-  i2 = "new experiences",
-  city = "here"
-) => {
-  // produce several natural-sounding templates
+const synthTemplate = (promptText, vibe, i1 = "", i2 = "", city = "here") => {
+  // produce several natural-sounding templates (interest placeholders removed)
   const base = promptText.toLowerCase();
   const templates = [];
   if (vibe === "funny") {
+    templates.push(`a slow morning with coffee and a ridiculous playlist`);
+    templates.push(`trying to cook something ambitious and calling it art`);
     templates.push(
-      `a slow morning with coffee and a ridiculous playlist — what's your go-to sound?`
-    );
-    templates.push(
-      `trying to cook something ambitious and calling it art — you in?`
-    );
-    templates.push(
-      `finding humor in awkward moments and laughing about them later — what's yours?`
+      `finding humor in awkward moments and laughing about them later`
     );
   } else if (vibe === "romantic") {
     templates.push(
-      `sharing {i1} with someone who truly gets it ❤️ - what makes your heart skip a beat?`
+      `sharing small moments with someone who truly gets it - what makes your heart skip a beat?`
     );
     templates.push(
-      `creating beautiful {i2} moments together in {city} - does this sound like your love language too? ❤️`
+      `creating beautiful moments together in my favorite spots - does this sound like your love language too?`
     );
     templates.push(
-      `finding deep connection through {i1} experiences - what's your idea of the perfect moment?`
+      `finding deep connection through cozy nights - what's your idea of the perfect moment?`
     );
   } else if (vibe === "quirky") {
     templates.push(
-      `{i1} in wonderfully weird ways 🤪 - too weird for you or just weird enough?`
+      `little quirks in wonderfully weird ways - too weird for you or just weird enough?`
     );
     templates.push(
-      `appreciating the strange details of {i2} in {city} - embrace the weird with me?`
+      `appreciating the strange details around town - embrace the weird with me?`
     );
     templates.push(
-      `having unconventional {i1} experiences that make great stories - ready to be delightfully odd together?`
+      `having unconventional little adventures that make great stories - ready to be delightfully odd together?`
     );
   } else {
     templates.push(
-      `enjoying {i1} authentically every day ✨ - what brings you joy?`
+      `enjoying the little things authentically every day - what brings you joy?`
     );
     templates.push(
-      `experiencing {i1} fully and mindfully - how do you make life meaningful?`
+      `living fully and mindfully - how do you make life meaningful?`
     );
     templates.push(
-      `sharing my {i2} passion with others in {city} - what's your version of this?`
+      `sharing passions with others around town - what's your version of this?`
     );
   }
   return templates.slice(0, 3);
@@ -307,10 +297,10 @@ function varToFile(varName) {
           let keyword =
             pTokens.find((t) => t.length >= 4) || pTokens[0] || "this";
           if (keyword.length < 2) keyword = "this";
-          let variant = `${gCandidate} (especially about ${keyword})`;
+          let variant = `${gCandidate} — about ${keyword}`;
           let counter = 1;
           while (allTemplates.has(normalize(variant))) {
-            variant = `${gCandidate} (especially about ${keyword} ${counter})`;
+            variant = `${gCandidate} — about ${keyword} ${counter}`;
             counter += 1;
           }
           gCandidate = variant;

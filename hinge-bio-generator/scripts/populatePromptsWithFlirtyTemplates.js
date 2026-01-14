@@ -4,6 +4,7 @@ const path = require("path");
 const PROMPTS_DIR = path.join(__dirname, "../server/utils/prompts");
 
 const TARGET_VIBES = [
+  "funny",
   "romantic",
   "adventurous",
   "quirky",
@@ -14,16 +15,28 @@ const TARGET_VIBES = [
 
 // Template generators per vibe (short, flirty 20yo voice, no question marks, no emojis)
 const baseTemplates = {
+  funny: [
+    "you read recipe blogs like they're romantic novels",
+    "strong opinions about the optimal cereal-to-milk ratio",
+    "sending 2 AM memes that instantly improve my mood",
+    "turning minor disasters into comedy sketches",
+    "making very specific mood playlists",
+    "quoting obscure movies at inconvenient times",
+    "celebrating tiny wins like a big holiday",
+    "pretending to be a food critic at food trucks",
+    "dramatic reactions to small things are my specialty",
+    "messy buns and too much coffee fuel my chaos",
+  ],
   romantic: [
-    "I melt over thoughtful {i1}.",
-    "Soft texts about {i2} make my day.",
+    "I melt over thoughtful touches.",
+    "Warm check-ins make my day.",
     "Late-night cuddles and warm honesty are my vibe.",
     "I respond to steady attention, not games.",
     "Small surprises mean the most to me.",
     "I save my best for people who show up.",
     "Cozy nights and cute check-ins win me.",
     "I like slow flirts and real feelings.",
-    "Sweet notes about {i1} make me smile.",
+    "Sweet notes and small details make me smile.",
     "I keep it real and flirty.",
   ],
   adventurous: [
@@ -31,7 +44,7 @@ const baseTemplates = {
     "I pack snacks and a brave playlist.",
     "Little risks with kind people are my thing.",
     "Weekend road trips are my happy place.",
-    "I’ll try {i1} if it’s respectful.",
+    "I’m down to try new things if it’s respectful.",
     "Adventures with good vibes beat strict plans.",
     "I set boundaries but bring the energy.",
     "I trade time for wild memories.",
@@ -39,7 +52,7 @@ const baseTemplates = {
     "Brave stories and warm check-ins hook me.",
   ],
   quirky: [
-    "I collect odd stories about {i1} and giggle.",
+    "I collect odd stories and giggle.",
     "Please ask before touching my plants.",
     "Secret playlists and weird snacks are my love language.",
     "I keep my quirks and give big smiles.",
@@ -63,12 +76,12 @@ const baseTemplates = {
     "I treasure trust and thoughtful actions.",
   ],
   intellectual: [
-    "I love late chats about {i1} and coffee.",
+    "I love late chats and coffee.",
     "Clever ideas and playful debate light me up.",
     "Smart books and honest thoughts feel sexy.",
     "I trade curiosities and thoughtful notes.",
     "I like people who read and say interesting things.",
-    "Curiosity about {i2} keeps me interested.",
+    "Curiosity keeps me interested.",
     "Brainy banter and soft laughs work for me.",
     "I guard my focus but share it for good talks.",
     "Witty messages and honest curiosity win me.",
@@ -90,7 +103,7 @@ const baseTemplates = {
 
 // Ensure arrays are concise and contain placeholders occasionally
 const generateForVibe = (vibe, promptName) => {
-  const arr = baseTemplates[vibe].slice(0, 10).map((s) => s);
+  const arr = baseTemplates[vibe].slice(0, 20).map((s) => s);
   // Add slight prompt-awareness when promptName provides useful tokens
   if (promptName && promptName.length > 2) {
     // normalize camelCase or file-like names to spaced words first
@@ -159,10 +172,21 @@ const generateForVibe = (vibe, promptName) => {
     cleaned.push(s);
   }
 
-  // If dedupe trimmed too many entries, generate subtle variants to reach 10 unique lines
-  const variants = ["so much.", "lowkey.", "and smiling."];
+  // If dedupe trimmed too many entries, generate subtle variants to reach 20 unique lines
+  const variants = [
+    "so much.",
+    "lowkey.",
+    "and smiling.",
+    "for real.",
+    "and happy.",
+    "and grinning.",
+    "no cap.",
+    "seriously.",
+    "always.",
+    "and proud of it.",
+  ];
   let i = 0;
-  while (cleaned.length < 10 && arr.length > 0) {
+  while (cleaned.length < 20 && arr.length > 0) {
     const base = cleanEmoji(arr[i % arr.length]);
     const cand = (
       base.replace(/\.$/, "") +
@@ -175,10 +199,10 @@ const generateForVibe = (vibe, promptName) => {
       cleaned.push(cand);
     }
     i++;
-    if (i > 50) break; // safety
+    if (i > 200) break; // safety
   }
 
-  return cleaned.slice(0, 10);
+  return cleaned.slice(0, 20);
 };
 
 const files = fs

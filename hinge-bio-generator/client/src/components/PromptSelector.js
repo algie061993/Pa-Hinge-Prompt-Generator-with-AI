@@ -150,7 +150,7 @@ const PromptSelector = ({ userParams, formActive, onClose }) => {
         )}
 
         <div className="ai-status available">
-          <span>⚡ Fast Templates</span>
+          <span>Fast Templates</span>
         </div>
 
         <button
@@ -241,26 +241,25 @@ const PromptSelector = ({ userParams, formActive, onClose }) => {
                     (m) => m.source === "AI"
                   ).length > 0 && (
                     <span className="stat-item ai">
-                      🤖{" "}
+                      AI{" "}
                       {
                         Object.values(results.metadata).filter(
                           (m) => m.source === "AI"
                         ).length
                       }{" "}
-                      AI-generated
+                      generated
                     </span>
                   )}
                   {Object.values(results.metadata).filter(
                     (m) => m.source === "Template"
                   ).length > 0 && (
                     <span className="stat-item">
-                      ✨{" "}
+                      Template{" "}
                       {
                         Object.values(results.metadata).filter(
                           (m) => m.source === "Template"
                         ).length
-                      }{" "}
-                      Template
+                      }
                     </span>
                   )}
                 </div>
@@ -273,8 +272,8 @@ const PromptSelector = ({ userParams, formActive, onClose }) => {
                       <h3 className="prompt-question">{prompt}</h3>
                       <span className="source-badge">
                         {results.metadata?.[prompt]?.source === "AI"
-                          ? "🤖"
-                          : "✨"}
+                          ? "AI"
+                          : "Template"}
                       </span>
                       {results.metadata?.[prompt]?.mappedPromptKey &&
                         results.metadata?.[prompt]?.mappedPromptKey !==
@@ -304,13 +303,6 @@ const PromptSelector = ({ userParams, formActive, onClose }) => {
               <div className="user-params-display">
                 <h3>Your Profile</h3>
                 <p>{results.userParams.desiredVibe || "—"} vibe</p>
-                <div className="interests-display">
-                  {results.userParams.keyInterests?.map((interest) => (
-                    <span key={interest} className="interest-badge">
-                      {interest}
-                    </span>
-                  ))}
-                </div>
               </div>
             </div>
           )}
