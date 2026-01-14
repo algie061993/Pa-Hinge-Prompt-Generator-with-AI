@@ -8,11 +8,9 @@ const tryAI = async (prompt, userParams) => {
   if (!process.env.HUGGINGFACE_API_KEY) return null;
 
   try {
-    const { location, keyInterests, desiredVibe, tone, gender } = userParams;
+    const { keyInterests, desiredVibe, gender } = userParams;
     const aiPrompt = `Write a Hinge bio answer for: "${prompt}"
-Profile: ${gender}, ${location}, loves ${keyInterests?.join(
-      " & "
-    )}, ${desiredVibe}, ${tone}
+Profile: ${gender}, loves ${keyInterests?.join(" & ")}, ${desiredVibe}
 Rules: Natural, 1-2 sentences, show personality`;
 
     const response = await axios.post(
@@ -169,8 +167,8 @@ const combinedScore = async (prompt, candidate, extraTokens = []) => {
 };
 
 const getTemplateCandidates = (prompt, userParams) => {
-  const { location, keyInterests, desiredVibe } = userParams;
-  const city = location?.split(",")[0] || "here";
+  const { keyInterests, desiredVibe } = userParams;
+  const city = "here"; // location removed from user input — default to 'here'
   const i1 = keyInterests?.[0] || "new experiences";
   const i2 = keyInterests?.[1] || i1;
   const vibe = desiredVibe?.toLowerCase() || "default";
@@ -257,6 +255,69 @@ const getTemplateCandidates = (prompt, userParams) => {
   return { promptKey, candidates };
 };
 
+// Helper: pick randomly among the top N ranked candidates (adds variation between runs)
+const pickFromTop = (ranked, n = 3) => {
+  if (!ranked || ranked.length === 0) return null;
+  const top = ranked.slice(0, Math.max(1, Math.min(n, ranked.length)));
+  const choice = top[Math.floor(Math.random() * top.length)];
+  return choice.c || choice;
+};
+
+// Helper: sanitize a candidate so it's short, declarative, and not a hook question
+const sanitizeCandidate = (text, maxWords = 14) => {
+  if (!text || typeof text !== "string") return text;
+
+  let s = text.trim();
+
+  // If there's an explicit question fragment after a dash or em-dash, remove that fragment
+  s = s.replace(/\s*[—\-]\s*[^.?!]*\?/g, "");
+
+  // Remove any remaining question marks and trailing question fragments
+  s = s.replace(/\?/g, "");
+
+  // Collapse multiple spaces and trim
+  s = s.replace(/\s+/g, " ").trim();
+
+  // Shorten to maxWords to keep answers concise
+  const words = s.split(" ");
+  if (words.length > maxWords) {
+    s = words.slice(0, maxWords).join(" ") + "…";
+  }
+
+  // Ensure it doesn't end with incomplete punctuation
+  s = s.replace(/[–—\-\s]+$/g, "");
+
+  // Capitalize the first character for polish
+  s = s.charAt(0).toUpperCase() + s.slice(1);
+
+  return s;
+};
+
+// Small randomized variant helper to introduce harmless differences between runs
+const randomVariant = (text, i1 = null, i2 = null) => {
+  if (!text || Math.random() > 0.5) return text; // 50% of the time leave it unchanged
+
+  const variants = [];
+  // Simple synonym swaps
+  variants.push(text.replace(/^I love/i, "I adore"));
+  variants.push(text.replace(/^I love/i, "I’m into"));
+  variants.push(text.replace(/\bI love\b/i, "I dig"));
+
+  // Short appended flourishes (keeps it short)
+  if (i1) variants.push(`${text} — especially ${i1}`);
+  if (i2) variants.push(`${text} — low-key about ${i2}`);
+  variants.push(`${text} — low-key`);
+  variants.push(`${text} ✨`);
+
+  // Filter out variants identical to original and sanitize
+  const cleaned = variants
+    .map((v) => sanitizeCandidate(v))
+    .filter((v) => v && v !== sanitizeCandidate(text));
+
+  if (!cleaned.length) return text;
+  return cleaned[Math.floor(Math.random() * cleaned.length)];
+};
+
 const chooseUniqueAnswer = async (
   candidates,
   usedAnswers,
@@ -264,8 +325,8 @@ const chooseUniqueAnswer = async (
   prompt
 ) => {
   // Extract user tokens for improved scoring
-  const { location, keyInterests } = userParams || {};
-  const city = location?.split(",")[0] || "here";
+  const { keyInterests } = userParams || {};
+  const city = "here"; // location removed — default to 'here'
   const i1 = keyInterests?.[0] || "new experiences";
   const i2 = keyInterests?.[1] || i1;
 
@@ -293,8 +354,8 @@ const chooseUniqueAnswer = async (
       (a, b) => b.score - a.score || Math.random() - 0.5
     );
 
-    // Prefer the most relevant candidate (with interest matches if available), but randomize among ties
-    const top = ranked[0].c;
+    // Prefer the most relevant candidate but randomly pick among top 3 to increase variation
+    const top = pickFromTop(ranked, 3);
     const topLower = (top || "").toLowerCase();
 
     // Only append an interest clause when it feels contextually appropriate (heuristic)
@@ -323,15 +384,21 @@ const chooseUniqueAnswer = async (
     ) {
       // Append a natural interest mention when none exists in the chosen candidate
       let candidate = `${top} — I especially love ${i1}.`;
+      candidate = sanitizeCandidate(candidate);
+      candidate = randomVariant(candidate, i1, i2);
       let ctr = 1;
       while (usedAnswers.has(candidate)) {
-        candidate = `${top} — I especially love ${i1} (${ctr}).`;
+        candidate = randomVariant(
+          sanitizeCandidate(`${top} — I especially love ${i1} (${ctr}).`),
+          i1,
+          i2
+        );
         ctr += 1;
       }
       return candidate;
     }
 
-    return top;
+    return randomVariant(sanitizeCandidate(top), i1, i2);
   }
 
   // If every candidate is already used elsewhere, pick the most relevant one and create a natural variant
@@ -348,9 +415,14 @@ const chooseUniqueAnswer = async (
   // If there are no candidates at all, fall back to a small generated candidate
   if (!rankedAll || rankedAll.length === 0) {
     let candidate = `I love ${i1} in ${city}`;
+    candidate = randomVariant(sanitizeCandidate(candidate), i1, i2);
     let counter = 1;
     while (usedAnswers.has(candidate)) {
-      candidate = `I love ${i1} in ${city} (${counter})`;
+      candidate = randomVariant(
+        sanitizeCandidate(`I love ${i1} in ${city} (${counter})`),
+        i1,
+        i2
+      );
       counter += 1;
     }
     return candidate;
@@ -364,10 +436,14 @@ const chooseUniqueAnswer = async (
     baseLower.includes(i1.toLowerCase()) ||
     baseLower.includes(city.toLowerCase())
   ) {
-    let candidate = base;
+    let candidate = randomVariant(sanitizeCandidate(base), i1, i2);
     let counter = 1;
     while (usedAnswers.has(candidate)) {
-      candidate = `${base} (${counter})`;
+      candidate = randomVariant(
+        sanitizeCandidate(`${base} (${counter})`),
+        i1,
+        i2
+      );
       counter += 1;
     }
     return candidate;
@@ -381,10 +457,14 @@ const chooseUniqueAnswer = async (
   }
 
   // Ensure the variant is truly unique by appending a counter if needed
-  let candidate = variant;
+  let candidate = randomVariant(sanitizeCandidate(variant), i1, i2);
   let counter = 1;
   while (usedAnswers.has(candidate)) {
-    candidate = `${variant} (${counter})`;
+    candidate = randomVariant(
+      sanitizeCandidate(`${variant} (${counter})`),
+      i1,
+      i2
+    );
     counter += 1;
   }
 
@@ -396,13 +476,28 @@ const generateAnswers = async (userParams, selectedPrompts) => {
   const metadata = {};
   const usedAnswers = new Set();
 
+  const promptCounts = {};
   for (const prompt of selectedPrompts) {
+    promptCounts[prompt] = (promptCounts[prompt] || 0) + 1;
+
     // Try AI first (but avoid using the same AI answer twice), fallback to template
     const aiResult = await tryAI(prompt, userParams);
     let finalResult = null;
 
-    if (aiResult && !usedAnswers.has(aiResult.answer)) {
-      finalResult = aiResult;
+    // Randomly prefer templates some of the time to increase variety even when AI is available
+    const preferTemplateThisRun = Math.random() < 0.35; // ~35% of the time prefer templates
+
+    if (
+      aiResult &&
+      !preferTemplateThisRun &&
+      !usedAnswers.has(sanitizeCandidate(aiResult.answer))
+    ) {
+      // Sanitize AI answer before returning
+      finalResult = {
+        answer: sanitizeCandidate(aiResult.answer),
+        source: "AI",
+        model: aiResult.model || "AI",
+      };
     } else {
       const { promptKey: mappedPromptKey, candidates } = getTemplateCandidates(
         prompt,
@@ -415,24 +510,33 @@ const generateAnswers = async (userParams, selectedPrompts) => {
         prompt
       );
       finalResult = { answer, source: "Template", model: "Fast Template" };
-      // store mapping for debugging / UI
-      metadata[prompt] = {
-        source: finalResult.source,
-        model: finalResult.model,
-        mappedPromptKey,
-      };
+      // store mapping for debugging / UI --- stored under final key below
+      // metadata mapping done after key resolution
     }
 
     // Ensure we mark the answer as used so subsequent prompts avoid duplication
     usedAnswers.add(finalResult.answer);
 
-    result[prompt] = finalResult.answer;
-    // If metadata wasn't set in the template branch, ensure it still exists (AI branch)
-    if (!metadata[prompt])
-      metadata[prompt] = {
-        source: finalResult.source,
-        model: finalResult.model,
-      };
+    // If same prompt was selected multiple times, create distinct keys
+    const count = promptCounts[prompt];
+    const resultKey = count > 1 ? `${prompt} (${count})` : prompt;
+
+    result[resultKey] = finalResult.answer;
+
+    // Store metadata using the same key
+    metadata[resultKey] = {
+      source: finalResult.source,
+      model: finalResult.model,
+    };
+
+    // If we had a mappedPromptKey (from template branch), include it
+    if (finalResult.source === "Template") {
+      const { promptKey: mappedPromptKey } = getTemplateCandidates(
+        prompt,
+        userParams
+      );
+      metadata[resultKey].mappedPromptKey = mappedPromptKey;
+    }
   }
 
   return { promptAnswers: result, metadata };

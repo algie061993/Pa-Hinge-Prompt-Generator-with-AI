@@ -6,7 +6,10 @@ const bioRoutes = require("./routes/bioRoutes");
 const app = express();
 
 app.use(cors({
-  origin: process.env.CLIENT_URL || 'http://localhost:3000',
+  origin: [
+    'http://localhost:3000',
+    'https://6vvx9t5w-3000.asse.devtunnels.ms'
+  ],
   credentials: true,
   methods: ['GET', 'POST'],
   allowedHeaders: ['Content-Type', 'X-CSRF-Token']

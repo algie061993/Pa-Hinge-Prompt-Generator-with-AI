@@ -1,53 +1,83 @@
 const iGoCrazyFor = {
-  "funny": [
+  funny: [
     "people who can quote {i1} references at the perfect moment 📺 - what's your weirdest {i1} story?",
     "{i2} enthusiasts who think they're experts but are adorably wrong - please tell me you relate 😅",
     "the smell of coffee and the sound of {i1} on windows ☕ - am I the only one who thinks this?",
     "finding the perfect {i2} meme to send at 2am - relatable? - what's your take on this madness?",
-    "people in {city} who get genuinely excited about {i1} - is this too chaotic for you? 🤪"
+    "people in {city} who get genuinely excited about {i1} - is this too chaotic for you? 🤪",
   ],
-  "romantic": [
-    "handwritten notes about {i1} and unexpected flowers 💐 - what makes your heart skip a beat?",
-    "slow dancing in the kitchen while {i2} plays - does this sound like your love language too? ❤️",
-    "the way someone's eyes light up when they talk about {i1} ✨ - what's your idea of the perfect moment?",
-    "stolen glances during {i2} moments in {city} - would you want to experience this together?",
-    "morning coffee together while discussing {i1} in comfortable silence - what makes you feel most loved?"
+  romantic: [
+    "I protect my heart, but {i1} makes me melt",
+    "Small {i1} gestures win me over quickly",
+    "I keep my space sacred but I share it for real love",
+    "I guard my time and trade it for sweet moments",
+    "Soft texts about {i2} make my day",
+    "I value steady affection, not drama",
+    "I give my best to people who show up",
+    "I’m all about cozy nights and warm honesty",
+    "I love thoughtful surprises that show you noticed",
+    "I prefer deep connections and slow flirts",
   ],
-  "adventurous": [
-    "spontaneous {i1} road trips with no destination in mind 🚗 - what's on your bucket list?",
-    "trying {i2} in foreign countries - want to be my adventure buddy? 🌟",
-    "hiking trails in {city} that lead to breathtaking {i1} views - what's the wildest thing you've done?",
-    "midnight {i2} adventures under starry skies - where should we explore first?",
-    "saying yes to {i1} that scare me a little - ready for some spontaneous fun?"
+  adventurous: [
+    "I need heads up for plans, but I love sudden trips",
+    "Boundaries keep me safe while I chase {i1} adventures",
+    "I’ll say yes to {i2} if it’s planned with respect",
+    "I pack snacks and energy for spontaneous road trips",
+    "I protect my time but trade it for epic memories",
+    "I love wild ideas done with kindness and clarity",
+    "No pressure, all adventure and honest check ins",
+    "I bring the playlist and you bring the map",
+    "I set limits but I’m always down for exploring",
+    "I keep things safe so fun can be fearless",
   ],
-  "quirky": [
-    "vintage {i1} records and the stories behind them 🎵 - too weird for you or just weird enough? 🤪",
-    "{i2} shops with cats and hidden reading nooks in {city} - what's your strangest obsession?",
-    "people who collect {i1} - embrace the weird with me?",
-    "late-night philosophical conversations about {i2} - what makes you wonderfully different?",
-    "finding four-leaf clovers and making {i1} wishes 🍀 - ready to be delightfully odd together?"
+  quirky: [
+    "I name my plants and expect respect for them",
+    "Please ask before borrowing my socks, it’s serious",
+    "I love weird rituals and good snacks",
+    "I’ll share my secret playlist if you respect my space",
+    "I collect odd stories about {i1} and giggle about them",
+    "I keep my quirks sacred and my hugs selective",
+    "No surprise guests, only surprise pastries allowed",
+    "I adore clever memes and thoughtful weirdness",
+    "Respect my odd little rules and we get along great",
+    "I guard my space and reward you with charm",
   ],
-  "serious": [
-    "meaningful {i1} conversations that last until sunrise - what drives your personal growth?",
-    "people passionate about making a difference through {i2} - how do you stay motivated?",
-    "the feeling of personal growth from {i1} challenges - what's your biggest life lesson?",
-    "authentic {i2} connections that go beyond surface level - what matters most to you?",
-    "moments of genuine vulnerability during {i1} experiences - how do you define success?"
+  serious: [
+    "I value clarity and honesty above all else",
+    "I won’t play games, I show up consistently",
+    "I protect my time and expect the same",
+    "No mixed signals, just steady, kind actions",
+    "I need reliability and thoughtful follow through",
+    "Boundaries keep things respectful and grown up",
+    "I invest in people who invest back",
+    "I won’t be rushed into emotional work",
+    "I guard my standards and reward real effort",
+    "I prefer meaningful action over empty promises",
   ],
-  "intellectual": [
-    "{i1} documentaries that completely change my perspective 🧠 - what's your perspective on this? 🧠",
-    "debates about {i2} that challenge my existing beliefs - want to dive deeper into this topic?",
-    "learning something new about {i1} that connects to everything else - what have you learned recently?",
-    "{i2} books that make me question everything I thought I knew - challenge my thinking on this?",
-    "conversations with people smarter than me about {i1} - what fascinates you most?"
+  intellectual: [
+    "I love deep chats about {i1} late into the night",
+    "Thoughtful debate and curiosity are my weak spot",
+    "I value ideas, wit, and honest opinions",
+    "I guard my focus but share it for smart talks",
+    "I prefer substance to surface level chatter",
+    "Bring great questions and I’ll bring good answers",
+    "I protect my curiosity and cherish new insights",
+    "I like people who read and think about {i2}",
+    "Intellectual honesty is sexy to me",
+    "I adore thoughtful, playful mind games",
   ],
-  "default": [
-    "genuine laughter and people who love {i1} as much as I do 😊 - what brings you joy?",
-    "{i2} views and golden hour photography in {city} - what's your version of this? ✨",
-    "the perfect {i1} playlist for any mood or moment - how do you make life meaningful?",
-    "cozy nights in with good company and {i2} - what's your passion?",
-    "finding beauty in everyday {i1} moments - what makes you feel alive?"
-  ]
+  default: [
+    "I want honesty, respect, and a little sparkle",
+    "Boundaries help me be kind and present",
+    "I keep my space sacred and my heart open",
+    "I like simple plans and warm check ins",
+    "Respect my limits and I’ll be your biggest fan",
+    "I prefer real connection over empty noise",
+    "I protect my time but trade it for quality",
+    "Small gestures mean a lot to me",
+    "I enjoy steady kindness and playful energy",
+    "I like people who know how to show up",
+  ],
 };
 
 module.exports = iGoCrazyFor;

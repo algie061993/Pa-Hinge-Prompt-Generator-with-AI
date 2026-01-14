@@ -1,9 +1,19 @@
-const myLoveLanguageIs = {
-  funny: [
-    "quality time with low-pressure conversation",
-    "small acts of service (making coffee counts)",
-    "words that show you noticed what mattered to me",
-  ],
+const fs = require("fs");
+const path = require("path");
+
+const PROMPTS_DIR = path.join(__dirname, "../server/utils/prompts");
+
+const TARGET_VIBES = [
+  "romantic",
+  "adventurous",
+  "quirky",
+  "serious",
+  "intellectual",
+  "default",
+];
+
+// Template generators per vibe (short, no question marks, include {i1}/{i2} sometimes)
+const baseTemplates = {
   romantic: [
     "I protect my heart, but {i1} makes me melt",
     "Small {i1} gestures win me over quickly",
@@ -78,4 +88,67 @@ const myLoveLanguageIs = {
   ],
 };
 
-module.exports = myLoveLanguageIs;
+// Ensure arrays are concise and contain placeholders occasionally
+const generateForVibe = (vibe, promptName) => {
+  const arr = baseTemplates[vibe].slice(0, 10);
+  // Add slight prompt-awareness when promptName provides useful tokens
+  if (promptName && promptName.length > 2) {
+    // for a few entries, append a tiny phrase referencing the prompt in a short way
+    arr[1] = arr[1].replace(/\.$/, "");
+  }
+  return arr;
+};
+
+const files = fs
+  .readdirSync(PROMPTS_DIR)
+  .filter((f) => f.endsWith(".js") && f !== "index.js");
+
+files.forEach((file) => {
+  if (file.endsWith(".bak")) return; // skip backups
+  const full = path.join(PROMPTS_DIR, file);
+  try {
+    const mod = require(full);
+    const varMatch = fs
+      .readFileSync(full, "utf8")
+      .match(/const\s+([a-zA-Z0-9_]+)\s*=\s*{\s*/);
+    const varName = varMatch ? varMatch[1] : null;
+    if (!varName) {
+      console.warn("Skipping", file, "— could not detect var name");
+      return;
+    }
+
+    // Build new object text
+    const lines = [];
+    lines.push(`const ${varName} = {`);
+
+    // Keep existing keys but override target vibes
+    const keys = Object.keys(mod);
+    for (const k of keys) {
+      if (TARGET_VIBES.includes(k)) {
+        const arr = generateForVibe(k, file.replace(".js", ""));
+        lines.push(`  ${k}: [`);
+        for (const s of arr) {
+          lines.push(`    "${s.replace(/"/g, '\\"')}",`);
+        }
+        lines.push("  ],");
+      } else {
+        // keep original array content as-is via serialization
+        const orig = mod[k] || [];
+        lines.push(`  ${k}: [`);
+        for (const s of orig.slice(0, 50)) {
+          lines.push(`    "${(s || "").replace(/"/g, '\\"')}",`);
+        }
+        lines.push("  ],");
+      }
+    }
+
+    lines.push("};\n\nmodule.exports = " + varName + ";\n");
+
+    fs.writeFileSync(full, lines.join("\n"));
+    console.log("Updated", file);
+  } catch (err) {
+    console.error("Error updating", file, err.message);
+  }
+});
+
+console.log("Done updating prompt files");
