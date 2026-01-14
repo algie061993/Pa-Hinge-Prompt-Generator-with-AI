@@ -138,7 +138,47 @@ const generateForVibe = (vibe, promptName) => {
       if (arr[2]) arr[2] = arr[2].replace(/\.$/, "") + ` about ${token}.`;
     }
   }
-  return arr;
+  // sanitize: remove emojis, collapse whitespace, and dedupe (case-insensitive)
+  const cleanEmoji = (s) =>
+    (s || "")
+      .replace(
+        /[\u{1F600}-\u{1F64F}\u{1F300}-\u{1F5FF}\u{1F680}-\u{1F6FF}\u{2600}-\u{26FF}\u{2700}-\u{27BF}\u{1F900}-\u{1F9FF}\u{1F1E6}-\u{1F1FF}\uFE0F}]/gu,
+        ""
+      )
+      .replace(/\s+/g, " ")
+      .trim();
+
+  const seen = new Set();
+  const cleaned = [];
+  for (let s of arr) {
+    s = cleanEmoji(s);
+    if (!s) continue;
+    const key = s.toLowerCase();
+    if (seen.has(key)) continue;
+    seen.add(key);
+    cleaned.push(s);
+  }
+
+  // If dedupe trimmed too many entries, generate subtle variants to reach 10 unique lines
+  const variants = ["so much.", "lowkey.", "and smiling."];
+  let i = 0;
+  while (cleaned.length < 10 && arr.length > 0) {
+    const base = cleanEmoji(arr[i % arr.length]);
+    const cand = (
+      base.replace(/\.$/, "") +
+      " " +
+      variants[cleaned.length % variants.length]
+    ).trim();
+    const key = cand.toLowerCase();
+    if (!seen.has(key)) {
+      seen.add(key);
+      cleaned.push(cand);
+    }
+    i++;
+    if (i > 50) break; // safety
+  }
+
+  return cleaned.slice(0, 10);
 };
 
 const files = fs
