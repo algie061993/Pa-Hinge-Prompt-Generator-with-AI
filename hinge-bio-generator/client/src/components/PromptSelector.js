@@ -153,6 +153,29 @@ const PromptSelector = ({ userParams, formActive, onClose }) => {
           <span>⚡ Fast Templates</span>
         </div>
 
+        <button
+          className="btn-generate-prompts button-focus"
+          onClick={handleGenerateAnswers}
+          disabled={loading || selectedPrompts.length === 0}
+          aria-label="Generate selected prompt answers"
+        >
+          {loading ? (
+            <>
+              <FiLoader className="spinner" />
+              Generating...
+            </>
+          ) : (
+            <>
+              <FiSend />
+              Generate Answers
+            </>
+          )}
+        </button>
+
+        <div className="prompt-selection-info">
+          <p>Selected: {selectedPrompts.length}/3</p>
+        </div>
+
         <div className="category-tabs">
           {Object.keys(HINGE_PROMPTS).map((category) => (
             <button
