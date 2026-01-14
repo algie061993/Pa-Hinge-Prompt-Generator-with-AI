@@ -77,14 +77,26 @@ const PromptSelector = ({ userParams, formActive, onClose }) => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [results, setResults] = useState(null);
+  const [lastPrompts, setLastPrompts] = useState([]);
 
   if (!formActive) return null;
 
-  const handlePromptToggle = (prompt) => {
-    if (selectedPrompts.includes(prompt)) {
-      setSelectedPrompts((prev) => prev.filter((p) => p !== prompt));
-    } else if (selectedPrompts.length < 3) {
-      setSelectedPrompts((prev) => [...prev, prompt]);
+  const handlePromptToggle = (prompt, e) => {
+    const checked = e.target.checked;
+    if (checked) {
+      // Add one instance (allow duplicates up to 3 total)
+      if (selectedPrompts.length < 3) {
+        setSelectedPrompts((prev) => [...prev, prompt]);
+      }
+    } else {
+      // Remove a single instance of this prompt
+      setSelectedPrompts((prev) => {
+        const idx = prev.indexOf(prompt);
+        if (idx === -1) return prev;
+        const copy = prev.slice();
+        copy.splice(idx, 1);
+        return copy;
+      });
     }
     setResults(null);
     setError("");
@@ -105,6 +117,7 @@ const PromptSelector = ({ userParams, formActive, onClose }) => {
         setResults(null);
       } else {
         setResults(response);
+        setLastPrompts(selectedPrompts.slice()); // remember for easy regen
       }
     } catch (err) {
       setError(err.error || "Failed to generate answers");
@@ -121,11 +134,18 @@ const PromptSelector = ({ userParams, formActive, onClose }) => {
 
   return (
     <div className="prompt-selector-container">
-      <div className="prompt-selector">
-        <h2>Generate Hinge Prompt Answers</h2>
-        <p className="prompt-subtitle">
-          Select up to 3 prompts to generate personalized answers
-        </p>
+      <div className="prompt-selector prompt-panel">
+        <div className="prompt-header">
+          <div>
+            <h2>Generate Hinge Prompt Answers</h2>
+            <p className="prompt-subtitle">Select up to 3 prompts to generate personalized answers</p>
+          </div>
+        </div>
+        {error && (
+          <div className="error-message" role="alert" aria-live="polite">
+            {error}
+          </div>
+        )
 
         <div className="ai-status available">
           <span>⚡ Fast Templates</span>
@@ -146,30 +166,30 @@ const PromptSelector = ({ userParams, formActive, onClose }) => {
         </div>
 
         <div className="prompts-list">
-          {HINGE_PROMPTS[selectedCategory].map((prompt) => (
-            <label key={prompt} className="prompt-item">
-              <input
-                type="checkbox"
-                checked={selectedPrompts.includes(prompt)}
-                onChange={() => handlePromptToggle(prompt)}
-                disabled={
-                  selectedPrompts.length >= 3 &&
-                  !selectedPrompts.includes(prompt)
-                }
-              />
-              <span className="prompt-text">{prompt}</span>
-              {selectedPrompts.includes(prompt) && (
-                <span className="prompt-selected">✓</span>
-              )}
-            </label>
-          ))}
+          {HINGE_PROMPTS[selectedCategory].map((prompt) => {
+            const count = selectedPrompts.filter((p) => p === prompt).length;
+            return (
+              <label key={prompt} className="prompt-item">
+                <input
+                  type="checkbox"
+                  checked={count > 0}
+                  onChange={(e) => handlePromptToggle(prompt, e)}
+                  disabled={selectedPrompts.length >= 3 && count === 0}
+                />
+                <span className="prompt-text">{prompt}</span>
+                {!!count && (
+                  <span className="prompt-selected">
+                    {count > 1 ? `${count}×` : "✓"}
+                  </span>
+                )}
+              </label>
+            );
+          })}
         </div>
 
         <div className="prompt-selection-info">
           <p>Selected: {selectedPrompts.length}/3</p>
         </div>
-
-        {error && <div className="error-message">{error}</div>}
 
         <button
           className="btn-generate-prompts"
@@ -191,6 +211,7 @@ const PromptSelector = ({ userParams, formActive, onClose }) => {
       </div>
 
       <div className="prompt-results-wrapper">
+        <div className="results-panel">
         {loading && (
           <div className="loading-placeholder">
             <FiLoader className="spinner" /> Generating answers...
@@ -278,10 +299,7 @@ const PromptSelector = ({ userParams, formActive, onClose }) => {
 
             <div className="user-params-display">
               <h3>Your Profile</h3>
-              <p>
-                {results.userParams.location} • {results.userParams.desiredVibe}{" "}
-                vibe
-              </p>
+              <p>{results.userParams.desiredVibe || "—"} vibe</p>
               <div className="interests-display">
                 {results.userParams.keyInterests?.map((interest) => (
                   <span key={interest} className="interest-badge">
@@ -292,8 +310,34 @@ const PromptSelector = ({ userParams, formActive, onClose }) => {
             </div>
           </div>
         )}
+        </div>
 
         <div className="prompt-actions">
+          {" "}
+          <button
+            className="btn-regenerate"
+            onClick={() => {
+              if (lastPrompts.length === 0) return;
+              setError("");
+              setLoading(true);
+              generatePromptAnswers(userParams, lastPrompts)
+                .then((response) => {
+                  if (!response?.promptAnswers) {
+                    setError("No answers returned from server. Try again.");
+                    setResults(null);
+                  } else {
+                    setResults(response);
+                  }
+                })
+                .catch((err) =>
+                  setError(err.error || "Failed to generate answers")
+                )
+                .finally(() => setLoading(false));
+            }}
+            title="Regenerate"
+          >
+            Regenerate
+          </button>
           <button className="btn-close-prompts" onClick={onClose} title="Close">
             Close
           </button>
