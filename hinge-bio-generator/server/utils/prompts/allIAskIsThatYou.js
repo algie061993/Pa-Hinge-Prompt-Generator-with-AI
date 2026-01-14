@@ -1,19 +1,79 @@
 const allIAskIsThatYou = {
-  "funny": [
-    "turning {i2} into comedy gold somehow - I have a gift! - please tell me you relate 😅"],
-  "romantic": [
-    ],
-  "adventurous": [
-    ],
-  "quirky": [
-    "having unconventional {i1} experiences that make great stories - ready to be delightfully odd together?"
+  funny: [
+    "turning {i2} into comedy gold somehow - I have a gift! - please tell me you relate 😅",
   ],
-  "serious": [
-    "growing through {i2} challenges that shape who I am - how do you stay motivated?"],
-  "intellectual": [
-    "researching {i1} extensively - what have - what have you learned recently?"],
-  "default": [
-    "enjoying {i1} authentically every day ✨ - what brings you joy?"]
+  romantic: [
+    "I melt over thoughtful {i1} about iask.",
+    "Soft texts about {i2} make my day.",
+    "Late-night cuddles and warm honesty are my vibe about iask.",
+    "I respond to steady attention, not games.",
+    "Small surprises mean the most to me.",
+    "I save my best for people who show up.",
+    "Cozy nights and cute check-ins win me.",
+    "I like slow flirts and real feelings.",
+    "Sweet notes about {i1} make me smile.",
+    "I keep it real and flirty.",
+  ],
+  adventurous: [
+    "Spontaneous trips make my heart race about iask.",
+    "I pack snacks and a brave playlist.",
+    "Little risks with kind people are my thing about iask.",
+    "Weekend road trips are my happy place.",
+    "I’ll try {i1} if it’s respectful.",
+    "Adventures with good vibes beat strict plans.",
+    "I set boundaries but bring the energy.",
+    "I trade time for wild memories.",
+    "I love sharing maps and silly playlists.",
+    "Brave stories and warm check-ins hook me.",
+  ],
+  quirky: [
+    "I collect odd stories about {i1} and giggle about iask.",
+    "Please ask before touching my plants.",
+    "Secret playlists and weird snacks are my love language about iask.",
+    "I keep my quirks and give big smiles.",
+    "I trade jokes for cozy invites.",
+    "I love tiny rituals and honest weirdness.",
+    "My laugh is loud and a little dramatic.",
+    "I guard my space and reward charm.",
+    "I adore playful weirdness and kind folks.",
+    "Small oddities make me curious.",
+  ],
+  serious: [
+    "I value honesty and steady follow-through about iask.",
+    "I show up, no games, just real care.",
+    "I set boundaries and respect yours about iask.",
+    "I give time to people who prove themselves.",
+    "Kind consistency wins my attention.",
+    "I prefer deep talks to small talk.",
+    "I protect my time and share it wisely.",
+    "I like partners who keep their promises.",
+    "Real effort outshines fancy words.",
+    "I treasure trust and thoughtful actions.",
+  ],
+  intellectual: [
+    "I love late chats about {i1} and coffee about iask.",
+    "Clever ideas and playful debate light me up.",
+    "Smart books and honest thoughts feel sexy about iask.",
+    "I trade curiosities and thoughtful notes.",
+    "I like people who read and say interesting things.",
+    "Curiosity about {i2} keeps me interested.",
+    "Brainy banter and soft laughs work for me.",
+    "I guard my focus but share it for good talks.",
+    "Witty messages and honest curiosity win me.",
+    "Thoughtful conversations feel like sparks.",
+  ],
+  default: [
+    "I want honesty, sparks, and small kindnesses about iask.",
+    "Boundaries help me stay open and present.",
+    "I prefer real connection over empty noise about iask.",
+    "Small gestures and steady check-ins are my thing.",
+    "I share my space with people who show up.",
+    "Warm messages and playful banter make my day.",
+    "I protect my time but trade it for fun.",
+    "Simple plans and sweet follow-through make me smile.",
+    "Respect my limits and I’ll cheer you on.",
+    "I like people who know how to show up.",
+  ],
 };
 
 module.exports = allIAskIsThatYou;

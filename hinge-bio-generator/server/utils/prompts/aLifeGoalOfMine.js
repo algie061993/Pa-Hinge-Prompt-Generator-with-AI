@@ -1,53 +1,83 @@
 const aLifeGoalOfMine = {
-  "funny": [
+  funny: [
     "is to master {i1} without Googling it every five minutes 😏 - what's your weirdest {i1} story?",
     "is becoming a professional {i2} critic - someone's gotta do it, right? - please tell me you relate 😅",
     "is to perfect my 'I'm totally listening' face during {i1} conversations 🎭 - am I the only one who thinks this?",
     "is learning to adult in {city} without having a mental breakdown daily - what's your take on this madness?",
-    "is to become fluent in {i1} sarcasm... oh wait, already there 💅 - is this too chaotic for you? 🤪"
+    "is to become fluent in {i1} sarcasm... oh wait, already there 💅 - is this too chaotic for you? 🤪",
   ],
-  "romantic": [
-    "is finding someone who loves {i1} as much as I do ❤️ Could that be - what makes your heart skip a beat?",
-    "is building a love story worth telling our grandkids about in {city} - does this sound like your love language too? ❤️",
-    "is creating magical {i2} moments with someone special - interested? - what's your idea of the perfect moment?",
-    "is finding my person and exploring {i1} together, hand in hand 🌟 - would you want to experience this together?",
-    "is learning to love deeply through shared {i2} adventures - what makes you feel most loved?"
+  romantic: [
+    "I melt over thoughtful {i1} about mine.",
+    "Soft texts about {i2} make my day.",
+    "Late-night cuddles and warm honesty are my vibe about mine.",
+    "I respond to steady attention, not games.",
+    "Small surprises mean the most to me.",
+    "I save my best for people who show up.",
+    "Cozy nights and cute check-ins win me.",
+    "I like slow flirts and real feelings.",
+    "Sweet notes about {i1} make me smile.",
+    "I keep it real and flirty.",
   ],
-  "adventurous": [
-    "is backpacking through every {i1} destination before I'm 40 🌍 - what's on your bucket list?",
-    "is mastering {i2} in the wildest places possible - want to be my adventure buddy? 🌟",
-    "is road-tripping from {city} to everywhere with good music and {i1} - what's the wildest thing you've done?",
-    "is climbing mountains and conquering {i2} fears, one peak at a time - where should we explore first?",
-    "is collecting passport stamps and {i1} stories from around the globe - ready for some spontaneous fun?"
+  adventurous: [
+    "Spontaneous trips make my heart race about mine.",
+    "I pack snacks and a brave playlist.",
+    "Little risks with kind people are my thing about mine.",
+    "Weekend road trips are my happy place.",
+    "I’ll try {i1} if it’s respectful.",
+    "Adventures with good vibes beat strict plans.",
+    "I set boundaries but bring the energy.",
+    "I trade time for wild memories.",
+    "I love sharing maps and silly playlists.",
+    "Brave stories and warm check-ins hook me.",
   ],
-  "quirky": [
-    "is to own a {i1} shop with a secret speakeasy in the back 📚🍸 - too weird for you or just weird enough? 🤪",
-    "is learning to communicate with my {i2} (they're great listeners) - what's your strangest obsession?",
-    "is becoming the person with the perfect weird {i1} fact for any situation - embrace the weird with me?",
-    "is to master {i2} without having a mental breakdown - wish me luck! - what makes you wonderfully different?",
-    "is collecting vintage {i1} from places I've never been... yet 🗺️ - ready to be delightfully odd together?"
+  quirky: [
+    "I collect odd stories about {i1} and giggle about mine.",
+    "Please ask before touching my plants.",
+    "Secret playlists and weird snacks are my love language about mine.",
+    "I keep my quirks and give big smiles.",
+    "I trade jokes for cozy invites.",
+    "I love tiny rituals and honest weirdness.",
+    "My laugh is loud and a little dramatic.",
+    "I guard my space and reward charm.",
+    "I adore playful weirdness and kind folks.",
+    "Small oddities make me curious.",
   ],
-  "serious": [
-    "is making a meaningful impact through {i1} in my community - what drives your personal growth?",
-    "is building financial independence so I can pursue {i2} full-time - how do you stay motivated?",
-    "is developing emotional intelligence through {i1} and genuine connections - what's your biggest life lesson?",
-    "is creating a {i2} legacy that extends beyond just professional achievements - what matters most to you?",
-    "is learning to balance {i1} ambition with genuine happiness - how do you define success?"
+  serious: [
+    "I value honesty and steady follow-through about mine.",
+    "I show up, no games, just real care.",
+    "I set boundaries and respect yours about mine.",
+    "I give time to people who prove themselves.",
+    "Kind consistency wins my attention.",
+    "I prefer deep talks to small talk.",
+    "I protect my time and share it wisely.",
+    "I like partners who keep their promises.",
+    "Real effort outshines fancy words.",
+    "I treasure trust and thoughtful actions.",
   ],
-  "intellectual": [
-    "is understanding the intersection of {i1} and human psychology 🧠 - what's your perspective on this? 🧠",
-    "is reading everything about {i2} that challenges my worldview - want to dive deeper into this topic?",
-    "is learning {i1} to expand my perspective - what are - what have you learned recently?",
-    "is exploring the philosophy behind what makes {i2} truly meaningful - challenge my thinking on this?",
-    "is mastering critical thinking in our {i1}-saturated world - what fascinates you most?"
+  intellectual: [
+    "I love late chats about {i1} and coffee about mine.",
+    "Clever ideas and playful debate light me up.",
+    "Smart books and honest thoughts feel sexy about mine.",
+    "I trade curiosities and thoughtful notes.",
+    "I like people who read and say interesting things.",
+    "Curiosity about {i2} keeps me interested.",
+    "Brainy banter and soft laughs work for me.",
+    "I guard my focus but share it for good talks.",
+    "Witty messages and honest curiosity win me.",
+    "Thoughtful conversations feel like sparks.",
   ],
-  "default": [
-    "is living authentically through {i1} and inspiring others ✨ - what brings you joy?",
-    "is finding the perfect balance between {i2} and contentment - what's your version of this? ✨",
-    "is creating meaningful {i1} connections with people who 'get' me - how do you make life meaningful?",
-    "is turning my {i2} passion into something that makes a difference - what's your passion?",
-    "is building a life in {city} I'm genuinely excited to wake up to - what makes you feel alive?"
-  ]
+  default: [
+    "I want honesty, sparks, and small kindnesses about mine.",
+    "Boundaries help me stay open and present.",
+    "I prefer real connection over empty noise about mine.",
+    "Small gestures and steady check-ins are my thing.",
+    "I share my space with people who show up.",
+    "Warm messages and playful banter make my day.",
+    "I protect my time but trade it for fun.",
+    "Simple plans and sweet follow-through make me smile.",
+    "Respect my limits and I’ll cheer you on.",
+    "I like people who know how to show up.",
+  ],
 };
 
 module.exports = aLifeGoalOfMine;

@@ -4,12 +4,9 @@ import { FiSend, FiLoader } from "react-icons/fi";
 
 const BioForm = ({ onSuccess }) => {
   const [formData, setFormData] = useState({
-
-    location: "",
     gender: "",
     keyInterests: [],
     desiredVibe: "funny",
-    tone: "playful",
   });
 
   const [loading, setLoading] = useState(false);
@@ -23,18 +20,12 @@ const BioForm = ({ onSuccess }) => {
     }));
   };
 
-
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
 
     // Validation
-    if (
-      !formData.location ||
-      !formData.gender ||
-      formData.keyInterests.length === 0
-    ) {
+    if (!formData.gender || formData.keyInterests.length === 0) {
       setError("Please fill in all required fields");
       return;
     }
@@ -56,21 +47,6 @@ const BioForm = ({ onSuccess }) => {
 
   return (
     <form className="bio-form" onSubmit={handleSubmit}>
-
-
-      <div className="form-group">
-        <label htmlFor="location">Location *</label>
-        <input
-          type="text"
-          id="location"
-          name="location"
-          value={formData.location}
-          onChange={handleInputChange}
-          placeholder="e.g., New York, California"
-          required
-        />
-      </div>
-
       <div className="form-group">
         <label htmlFor="gender">Gender *</label>
         <select
@@ -101,15 +77,37 @@ const BioForm = ({ onSuccess }) => {
             } else {
               newInterests.splice(0, 1);
             }
-            setFormData(prev => ({ ...prev, keyInterests: newInterests }));
+            setFormData((prev) => ({ ...prev, keyInterests: newInterests }));
           }}
           required
         >
           <option value="">Select first interest</option>
-          {["travel", "cooking", "fitness", "music", "photography", "reading",
-            "hiking", "art", "movies", "dancing", "gaming", "sports",
-            "wine", "coffee", "yoga", "writing", "fashion", "tech",
-            "dogs", "cats", "beach", "mountains", "food", "comedy"].map(interest => (
+          {[
+            "travel",
+            "cooking",
+            "fitness",
+            "music",
+            "photography",
+            "reading",
+            "hiking",
+            "art",
+            "movies",
+            "dancing",
+            "gaming",
+            "sports",
+            "wine",
+            "coffee",
+            "yoga",
+            "writing",
+            "fashion",
+            "tech",
+            "dogs",
+            "cats",
+            "beach",
+            "mountains",
+            "food",
+            "comedy",
+          ].map((interest) => (
             <option key={interest} value={interest}>
               {interest.charAt(0).toUpperCase() + interest.slice(1)}
             </option>
@@ -129,20 +127,42 @@ const BioForm = ({ onSuccess }) => {
             } else {
               newInterests.splice(1, 1);
             }
-            setFormData(prev => ({ ...prev, keyInterests: newInterests }));
+            setFormData((prev) => ({ ...prev, keyInterests: newInterests }));
           }}
         >
           <option value="">Select second interest (optional)</option>
-          {["travel", "cooking", "fitness", "music", "photography", "reading",
-            "hiking", "art", "movies", "dancing", "gaming", "sports",
-            "wine", "coffee", "yoga", "writing", "fashion", "tech",
-            "dogs", "cats", "beach", "mountains", "food", "comedy"]
-            .filter(interest => interest !== formData.keyInterests[0])
-            .map(interest => (
-            <option key={interest} value={interest}>
-              {interest.charAt(0).toUpperCase() + interest.slice(1)}
-            </option>
-          ))}
+          {[
+            "travel",
+            "cooking",
+            "fitness",
+            "music",
+            "photography",
+            "reading",
+            "hiking",
+            "art",
+            "movies",
+            "dancing",
+            "gaming",
+            "sports",
+            "wine",
+            "coffee",
+            "yoga",
+            "writing",
+            "fashion",
+            "tech",
+            "dogs",
+            "cats",
+            "beach",
+            "mountains",
+            "food",
+            "comedy",
+          ]
+            .filter((interest) => interest !== formData.keyInterests[0])
+            .map((interest) => (
+              <option key={interest} value={interest}>
+                {interest.charAt(0).toUpperCase() + interest.slice(1)}
+              </option>
+            ))}
         </select>
       </div>
 
@@ -160,22 +180,6 @@ const BioForm = ({ onSuccess }) => {
           <option value="romantic">Romantic 💕</option>
           <option value="adventurous">Adventurous 🚀</option>
           <option value="intellectual">Intellectual 🧠</option>
-        </select>
-      </div>
-
-      <div className="form-group">
-        <label htmlFor="tone">Tone</label>
-        <select
-          id="tone"
-          name="tone"
-          value={formData.tone}
-          onChange={handleInputChange}
-        >
-          <option value="playful">Playful</option>
-          <option value="witty">Witty</option>
-          <option value="romantic">Romantic</option>
-          <option value="casual">Casual</option>
-          <option value="professional">Professional</option>
         </select>
       </div>
 

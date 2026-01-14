@@ -1,53 +1,83 @@
 const mySimplePleasures = {
-  "funny": [
+  funny: [
     "include finding WiFi passwords for {i1} streaming on the first try 📶 - what's your weirdest {i1} story?",
     "are getting the perfect amount of {i2} on my bagel - it's an art! - please tell me you relate 😅",
     "include successfully untangling {i1} headphones without losing my mind - am I the only one who thinks this?",
     "are finding money in old jacket pockets in {city} 💰 - what's your take on this madness?",
-    "include hitting every green light when I'm late to {i2} - is this too chaotic for you? 🤪"
+    "include hitting every green light when I'm late to {i2} - is this too chaotic for you? 🤪",
   ],
-  "romantic": [
-    "are slow Sunday mornings with coffee and {i1} ☕ - what makes your heart skip a beat?",
-    "include handwritten notes about {i2} and surprise flowers - does this sound like your love language too? ❤️",
-    "are dancing in the kitchen while cooking {i1} together - what's your idea of the perfect moment?",
-    "include watching {i2} sunsets in {city} and sharing quiet moments - would you want to experience this together?",
-    "are genuine compliments about my {i1} that make my heart skip - what makes you feel most loved?"
+  romantic: [
+    "I melt over thoughtful {i1} about pleasures.",
+    "Soft texts about {i2} make my day.",
+    "Late-night cuddles and warm honesty are my vibe about pleasures.",
+    "I respond to steady attention, not games.",
+    "Small surprises mean the most to me.",
+    "I save my best for people who show up.",
+    "Cozy nights and cute check-ins win me.",
+    "I like slow flirts and real feelings.",
+    "Sweet notes about {i1} make me smile.",
+    "I keep it real and flirty.",
   ],
-  "adventurous": [
-    "include spontaneous {i1} getaways from {city} 🗺️ Where should we go? - what's on your bucket list?",
-    "are trying {i2} street food in foreign countries - want to be my adventure buddy? 🌟",
-    "include hiking trails that lead to amazing {i1} views - what's the wildest thing you've done?",
-    "are midnight drives with good music and {i2} playlists - where should we explore first?",
-    "include saying yes to {i1} adventures that scare me a little - ready for some spontaneous fun?"
+  adventurous: [
+    "Spontaneous trips make my heart race about pleasures.",
+    "I pack snacks and a brave playlist.",
+    "Little risks with kind people are my thing about pleasures.",
+    "Weekend road trips are my happy place.",
+    "I’ll try {i1} if it’s respectful.",
+    "Adventures with good vibes beat strict plans.",
+    "I set boundaries but bring the energy.",
+    "I trade time for wild memories.",
+    "I love sharing maps and silly playlists.",
+    "Brave stories and warm check-ins hook me.",
   ],
-  "quirky": [
-    "include collecting vintage {i1} from thrift stores 📮 - too weird for you or just weird enough? 🤪",
-    "are finding the perfect {i2} book in a random bookshop - what's your strangest obsession?",
-    "include naming all my {i1} (they have personalities, I swear) - embrace the weird with me?",
-    "are discovering new {i2} shops in {city} with weird art - what makes you wonderfully different?",
-    "include making up stories about {i1} I see around town - ready to be delightfully odd together?"
+  quirky: [
+    "I collect odd stories about {i1} and giggle about pleasures.",
+    "Please ask before touching my plants.",
+    "Secret playlists and weird snacks are my love language about pleasures.",
+    "I keep my quirks and give big smiles.",
+    "I trade jokes for cozy invites.",
+    "I love tiny rituals and honest weirdness.",
+    "My laugh is loud and a little dramatic.",
+    "I guard my space and reward charm.",
+    "I adore playful weirdness and kind folks.",
+    "Small oddities make me curious.",
   ],
-  "serious": [
-    "are meaningful {i1} conversations that last until sunrise - what drives your personal growth?",
-    "include moments of genuine personal growth through {i2} - how do you stay motivated?",
-    "are helping others with {i1} without expecting anything back - what's your biggest life lesson?",
-    "include quiet reflection and mindful {i2} meditation - what matters most to you?",
-    "are creating {i1} that might outlast me - how do you define success?"
+  serious: [
+    "I value honesty and steady follow-through about pleasures.",
+    "I show up, no games, just real care.",
+    "I set boundaries and respect yours about pleasures.",
+    "I give time to people who prove themselves.",
+    "Kind consistency wins my attention.",
+    "I prefer deep talks to small talk.",
+    "I protect my time and share it wisely.",
+    "I like partners who keep their promises.",
+    "Real effort outshines fancy words.",
+    "I treasure trust and thoughtful actions.",
   ],
-  "intellectual": [
-    "include learning {i1} that changes my perspective 🧠 - what's your perspective on this? 🧠",
-    "are deep conversations about {i2} and life's big questions - want to dive deeper into this topic?",
-    "include reading books about {i1} that challenge my assumptions - what have you learned recently?",
-    "are connecting seemingly unrelated {i2} concepts - challenge my thinking on this?",
-    "include documentaries about {i1} that blow my mind - what fascinates you most?"
+  intellectual: [
+    "I love late chats about {i1} and coffee about pleasures.",
+    "Clever ideas and playful debate light me up.",
+    "Smart books and honest thoughts feel sexy about pleasures.",
+    "I trade curiosities and thoughtful notes.",
+    "I like people who read and say interesting things.",
+    "Curiosity about {i2} keeps me interested.",
+    "Brainy banter and soft laughs work for me.",
+    "I guard my focus but share it for good talks.",
+    "Witty messages and honest curiosity win me.",
+    "Thoughtful conversations feel like sparks.",
   ],
-  "default": [
-    "are fresh sheets and a perfectly made bed after {i1} 🛏️ - what brings you joy?",
-    "include the first sip of morning coffee before {i2} - what's your version of this? ✨",
-    "are genuine laughter with people who love {i1} - how do you make life meaningful?",
-    "include finding the perfect {i2} song for my mood - what's your passion?",
-    "are cozy nights in {city} with good food and {i1} - what makes you feel alive?"
-  ]
+  default: [
+    "I want honesty, sparks, and small kindnesses about pleasures.",
+    "Boundaries help me stay open and present.",
+    "I prefer real connection over empty noise about pleasures.",
+    "Small gestures and steady check-ins are my thing.",
+    "I share my space with people who show up.",
+    "Warm messages and playful banter make my day.",
+    "I protect my time but trade it for fun.",
+    "Simple plans and sweet follow-through make me smile.",
+    "Respect my limits and I’ll cheer you on.",
+    "I like people who know how to show up.",
+  ],
 };
 
 module.exports = mySimplePleasures;
