@@ -1,24 +1,24 @@
 /* NEW: Modern Side-by-Side UI */
 
 :root {
-  --bg: #ffffff;
-  --panel: #f7f8fb;
-  --muted: #6b7280;
-  --text: #0f172a;
-  --accent: #2563eb;
-  --accent-600: #1d4ed8;
-  --card: #ffffff;
-  --border: #e6e9ef;
-  --radius: 12px;
-  --radius-sm: 8px;
-  --shadow-sm: 0 6px 18px rgba(16, 24, 40, 0.06);
-  --shadow-md: 0 12px 30px rgba(16, 24, 40, 0.08);
-  --gap: 20px;
+  --bg: #07122a;
+  --panel: #0b1530;
+  --muted: #98a2b3;
+  --text: #e6eef8;
+  --accent: #f472b6;
+  --accent-600: #e0529e;
+  --card: #07122a;
+  --border: rgba(255, 255, 255, 0.04);
+  --radius: 16px;
+  --radius-sm: 12px;
+  --shadow-sm: 0 8px 20px rgba(3, 7, 18, 0.6);
+  --shadow-md: 0 14px 36px rgba(3, 7, 18, 0.72);
+  --gap: 24px;
 }
 
 /* Page layout */
 body {
-  background: linear-gradient(180deg, #fbfdff 0%, #f3f7ff 100%);
+  background: linear-gradient(180deg, #04060b 0%, #07122a 100%);
   color: var(--text);
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI",
     Roboto, "Helvetica Neue", Arial;
@@ -190,7 +190,7 @@ body {
 .btn-regenerate:hover,
 .btn-close-prompts:hover,
 .btn-clear-results:hover {
-  background: rgba(37, 99, 235, 0.06);
+  background: rgba(244, 114, 182, 0.06); /* pink tint */
   border-color: var(--accent);
 }
 
