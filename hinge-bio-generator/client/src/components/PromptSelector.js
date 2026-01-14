@@ -192,9 +192,10 @@ const PromptSelector = ({ userParams, formActive, onClose }) => {
         </div>
 
         <button
-          className="btn-generate-prompts"
+          className="btn-generate-prompts button-focus"
           onClick={handleGenerateAnswers}
           disabled={loading || selectedPrompts.length === 0}
+          aria-label="Generate selected prompt answers"
         >
           {loading ? (
             <>
@@ -223,9 +224,10 @@ const PromptSelector = ({ userParams, formActive, onClose }) => {
             <div className="results-header">
               <h2>Your Hinge Prompt Answers</h2>
               <button
-                className="btn-clear-results"
+                className="btn-clear-results button-focus"
                 onClick={handleClearSelection}
                 title="Clear"
+                aria-label="Clear generated answers"
               >
                 <FiX />
               </button>
@@ -315,7 +317,7 @@ const PromptSelector = ({ userParams, formActive, onClose }) => {
         <div className="prompt-actions">
           {" "}
           <button
-            className="btn-regenerate"
+            className="btn-regenerate button-focus"
             onClick={() => {
               if (lastPrompts.length === 0) return;
               setError("");
@@ -335,10 +337,11 @@ const PromptSelector = ({ userParams, formActive, onClose }) => {
                 .finally(() => setLoading(false));
             }}
             title="Regenerate"
+            aria-label="Regenerate answers for last prompts"
           >
             Regenerate
           </button>
-          <button className="btn-close-prompts" onClick={onClose} title="Close">
+          <button className="btn-close-prompts button-focus" onClick={onClose} title="Close" aria-label="Close prompt panel">
             Close
           </button>
         </div>
