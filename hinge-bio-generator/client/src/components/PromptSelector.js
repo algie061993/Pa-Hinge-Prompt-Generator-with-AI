@@ -138,14 +138,16 @@ const PromptSelector = ({ userParams, formActive, onClose }) => {
         <div className="prompt-header">
           <div>
             <h2>Generate Hinge Prompt Answers</h2>
-            <p className="prompt-subtitle">Select up to 3 prompts to generate personalized answers</p>
+            <p className="prompt-subtitle">
+              Select up to 3 prompts to generate personalized answers
+            </p>
           </div>
         </div>
         {error && (
           <div className="error-message" role="alert" aria-live="polite">
             {error}
           </div>
-        )
+        )}
 
         <div className="ai-status available">
           <span>⚡ Fast Templates</span>
@@ -213,105 +215,105 @@ const PromptSelector = ({ userParams, formActive, onClose }) => {
 
       <div className="prompt-results-wrapper">
         <div className="results-panel">
-        {loading && (
-          <div className="loading-placeholder">
-            <FiLoader className="spinner" /> Generating answers...
-          </div>
-        )}
-
-        {results && (
-          <div className="prompt-results">
-            <div className="results-header">
-              <h2>Your Hinge Prompt Answers</h2>
-              <button
-                className="btn-clear-results button-focus"
-                onClick={handleClearSelection}
-                title="Clear"
-                aria-label="Clear generated answers"
-              >
-                <FiX />
-              </button>
+          {loading && (
+            <div className="loading-placeholder">
+              <FiLoader className="spinner" /> Generating answers...
             </div>
+          )}
 
-            {results.metadata && (
-              <div className="source-stats">
-                {Object.values(results.metadata).filter(
-                  (m) => m.source === "AI"
-                ).length > 0 && (
-                  <span className="stat-item ai">
-                    🤖{" "}
-                    {
-                      Object.values(results.metadata).filter(
-                        (m) => m.source === "AI"
-                      ).length
-                    }{" "}
-                    AI-generated
-                  </span>
-                )}
-                {Object.values(results.metadata).filter(
-                  (m) => m.source === "Template"
-                ).length > 0 && (
-                  <span className="stat-item">
-                    ✨{" "}
-                    {
-                      Object.values(results.metadata).filter(
-                        (m) => m.source === "Template"
-                      ).length
-                    }{" "}
-                    Template
-                  </span>
-                )}
+          {results && (
+            <div className="prompt-results">
+              <div className="results-header">
+                <h2>Your Hinge Prompt Answers</h2>
+                <button
+                  className="btn-clear-results button-focus"
+                  onClick={handleClearSelection}
+                  title="Clear"
+                  aria-label="Clear generated answers"
+                >
+                  <FiX />
+                </button>
               </div>
-            )}
 
-            <div className="answers-grid">
-              {Object.keys(results.promptAnswers).map((prompt) => (
-                <div key={prompt} className="answer-card">
-                  <div className="answer-card-header">
-                    <h3 className="prompt-question">{prompt}</h3>
-                    <span className="source-badge">
-                      {results.metadata?.[prompt]?.source === "AI"
-                        ? "🤖"
-                        : "✨"}
+              {results.metadata && (
+                <div className="source-stats">
+                  {Object.values(results.metadata).filter(
+                    (m) => m.source === "AI"
+                  ).length > 0 && (
+                    <span className="stat-item ai">
+                      🤖{" "}
+                      {
+                        Object.values(results.metadata).filter(
+                          (m) => m.source === "AI"
+                        ).length
+                      }{" "}
+                      AI-generated
                     </span>
-                    {results.metadata?.[prompt]?.mappedPromptKey &&
-                      results.metadata?.[prompt]?.mappedPromptKey !==
-                        prompt && (
-                        <div className="mapped-key">
-                          from: {results.metadata[prompt].mappedPromptKey}
-                        </div>
-                      )}
-                  </div>
-                  <div className="answer-display">
-                    <div
-                      className="answer-text"
-                      onClick={() =>
-                        navigator.clipboard.writeText(
-                          results.promptAnswers[prompt]
-                        )
-                      }
-                      title="Click to copy"
-                    >
-                      {results.promptAnswers[prompt]}
+                  )}
+                  {Object.values(results.metadata).filter(
+                    (m) => m.source === "Template"
+                  ).length > 0 && (
+                    <span className="stat-item">
+                      ✨{" "}
+                      {
+                        Object.values(results.metadata).filter(
+                          (m) => m.source === "Template"
+                        ).length
+                      }{" "}
+                      Template
+                    </span>
+                  )}
+                </div>
+              )}
+
+              <div className="answers-grid">
+                {Object.keys(results.promptAnswers).map((prompt) => (
+                  <div key={prompt} className="answer-card">
+                    <div className="answer-card-header">
+                      <h3 className="prompt-question">{prompt}</h3>
+                      <span className="source-badge">
+                        {results.metadata?.[prompt]?.source === "AI"
+                          ? "🤖"
+                          : "✨"}
+                      </span>
+                      {results.metadata?.[prompt]?.mappedPromptKey &&
+                        results.metadata?.[prompt]?.mappedPromptKey !==
+                          prompt && (
+                          <div className="mapped-key">
+                            from: {results.metadata[prompt].mappedPromptKey}
+                          </div>
+                        )}
+                    </div>
+                    <div className="answer-display">
+                      <div
+                        className="answer-text"
+                        onClick={() =>
+                          navigator.clipboard.writeText(
+                            results.promptAnswers[prompt]
+                          )
+                        }
+                        title="Click to copy"
+                      >
+                        {results.promptAnswers[prompt]}
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
-            </div>
-
-            <div className="user-params-display">
-              <h3>Your Profile</h3>
-              <p>{results.userParams.desiredVibe || "—"} vibe</p>
-              <div className="interests-display">
-                {results.userParams.keyInterests?.map((interest) => (
-                  <span key={interest} className="interest-badge">
-                    {interest}
-                  </span>
                 ))}
               </div>
+
+              <div className="user-params-display">
+                <h3>Your Profile</h3>
+                <p>{results.userParams.desiredVibe || "—"} vibe</p>
+                <div className="interests-display">
+                  {results.userParams.keyInterests?.map((interest) => (
+                    <span key={interest} className="interest-badge">
+                      {interest}
+                    </span>
+                  ))}
+                </div>
+              </div>
             </div>
-          </div>
-        )}
+          )}
         </div>
 
         <div className="prompt-actions">
@@ -341,7 +343,12 @@ const PromptSelector = ({ userParams, formActive, onClose }) => {
           >
             Regenerate
           </button>
-          <button className="btn-close-prompts button-focus" onClick={onClose} title="Close" aria-label="Close prompt panel">
+          <button
+            className="btn-close-prompts button-focus"
+            onClick={onClose}
+            title="Close"
+            aria-label="Close prompt panel"
+          >
             Close
           </button>
         </div>
