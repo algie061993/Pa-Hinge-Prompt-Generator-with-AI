@@ -8,9 +8,9 @@ const tryAI = async (prompt, userParams) => {
   if (!process.env.HUGGINGFACE_API_KEY) return null;
 
   try {
-    const { keyInterests, desiredVibe, gender } = userParams;
+    const { desiredVibe } = userParams;
     const aiPrompt = `Write a Hinge bio answer for: "${prompt}"
-Profile: ${gender}, loves ${keyInterests?.join(" & ")}, ${desiredVibe}
+Profile vibe: ${desiredVibe}
 Rules: Natural, 1-2 sentences, show personality`;
 
     const response = await axios.post(
@@ -167,10 +167,11 @@ const combinedScore = async (prompt, candidate, extraTokens = []) => {
 };
 
 const getTemplateCandidates = (prompt, userParams) => {
-  const { keyInterests, desiredVibe } = userParams;
+  const { desiredVibe } = userParams || {};
   const city = "here"; // location removed from user input — default to 'here'
-  const i1 = keyInterests?.[0] || "new experiences";
-  const i2 = keyInterests?.[1] || i1;
+  // Interests removed — strip placeholders from templates
+  const i1 = "";
+  const i2 = "";
   const vibe = desiredVibe?.toLowerCase() || "default";
 
   // Normalize lookup: allow slightly different prompt text (case/whitespace)
@@ -275,6 +276,12 @@ const sanitizeCandidate = (text, maxWords = 14) => {
   // Remove any remaining question marks and trailing question fragments
   s = s.replace(/\?/g, "");
 
+  // Remove emojis and pictographs
+  s = s.replace(
+    /[\u{1F300}-\u{1F6FF}\u{2600}-\u{26FF}\u{2700}-\u{27BF}]/gu,
+    ""
+  );
+
   // Collapse multiple spaces and trim
   s = s.replace(/\s+/g, " ").trim();
 
@@ -294,7 +301,7 @@ const sanitizeCandidate = (text, maxWords = 14) => {
 };
 
 // Small randomized variant helper to introduce harmless differences between runs
-const randomVariant = (text, i1 = null, i2 = null) => {
+const randomVariant = (text) => {
   if (!text || Math.random() > 0.5) return text; // 50% of the time leave it unchanged
 
   const variants = [];
@@ -303,11 +310,9 @@ const randomVariant = (text, i1 = null, i2 = null) => {
   variants.push(text.replace(/^I love/i, "I’m into"));
   variants.push(text.replace(/\bI love\b/i, "I dig"));
 
-  // Short appended flourishes (keeps it short)
-  if (i1) variants.push(`${text} — especially ${i1}`);
-  if (i2) variants.push(`${text} — low-key about ${i2}`);
+  // Short appended flourishes (keeps it short and emoji-free)
   variants.push(`${text} — low-key`);
-  variants.push(`${text} ✨`);
+  variants.push(`${text} — for real`);
 
   // Filter out variants identical to original and sanitize
   const cleaned = variants
@@ -324,89 +329,36 @@ const chooseUniqueAnswer = async (
   userParams,
   prompt
 ) => {
-  // Extract user tokens for improved scoring
-  const { keyInterests } = userParams || {};
-  const city = "here"; // location removed — default to 'here'
-  const i1 = keyInterests?.[0] || "new experiences";
-  const i2 = keyInterests?.[1] || i1;
+  const city = "here";
 
-  // Rank unused candidates by relevance to the prompt (boost matches on i1/city and embeddings if available)
+  // Rank unused candidates by relevance to the prompt (embedding + token overlap where available)
   const unused = candidates.filter((c) => !usedAnswers.has(c));
   if (unused.length > 0) {
-    // Prefer candidates that explicitly mention the user's interests (i1 or i2)
-    const prefer = unused.filter(
-      (c) =>
-        c.toLowerCase().includes((i1 || "").toLowerCase()) ||
-        (i2 && c.toLowerCase().includes(i2.toLowerCase()))
-    );
-
-    const pool = prefer.length ? prefer : unused;
-
-    // Compute combined async scores (semantic + token)
     const scored = await Promise.all(
-      pool.map(async (c) => ({
-        c,
-        score: await combinedScore(prompt, c, [i1, city]),
-      }))
+      unused.map(async (c) => ({ c, score: await combinedScore(prompt, c) }))
     );
 
     const ranked = scored.sort(
       (a, b) => b.score - a.score || Math.random() - 0.5
     );
 
-    // Prefer the most relevant candidate but randomly pick among top 3 to increase variation
+    // Randomly pick among the top few to create variation
     const top = pickFromTop(ranked, 3);
-    const topLower = (top || "").toLowerCase();
+    let candidate = randomVariant(sanitizeCandidate(top || ""));
 
-    // Only append an interest clause when it feels contextually appropriate (heuristic)
-    const interestTriggers = [
-      "want",
-      "looking",
-      "tips",
-      "travel",
-      "this year",
-      "recommend",
-      "teach",
-      "learn",
-      "i want",
-      "want to",
-      "looking for",
-      "give me",
-    ];
-    const promptLower = (prompt || "").toLowerCase();
-
-    if (
-      i1 &&
-      i1 !== "new experiences" &&
-      !topLower.includes(i1.toLowerCase()) &&
-      !(i2 && topLower.includes(i2.toLowerCase())) &&
-      interestTriggers.some((t) => promptLower.includes(t))
-    ) {
-      // Append a natural interest mention when none exists in the chosen candidate
-      let candidate = `${top} — I especially love ${i1}.`;
-      candidate = sanitizeCandidate(candidate);
-      candidate = randomVariant(candidate, i1, i2);
-      let ctr = 1;
-      while (usedAnswers.has(candidate)) {
-        candidate = randomVariant(
-          sanitizeCandidate(`${top} — I especially love ${i1} (${ctr}).`),
-          i1,
-          i2
-        );
-        ctr += 1;
-      }
-      return candidate;
+    // Ensure uniqueness
+    let ctr = 1;
+    while (usedAnswers.has(candidate)) {
+      candidate = randomVariant(sanitizeCandidate(`${top} (${ctr})`));
+      ctr += 1;
     }
 
-    return randomVariant(sanitizeCandidate(top), i1, i2);
+    return candidate;
   }
 
   // If every candidate is already used elsewhere, pick the most relevant one and create a natural variant
   const scoredAll = await Promise.all(
-    candidates.map(async (c) => ({
-      c,
-      score: await combinedScore(prompt, c, [i1, city]),
-    }))
+    candidates.map(async (c) => ({ c, score: await combinedScore(prompt, c) }))
   );
   const rankedAll = scoredAll.sort(
     (a, b) => b.score - a.score || Math.random() - 0.5
@@ -414,14 +366,13 @@ const chooseUniqueAnswer = async (
 
   // If there are no candidates at all, fall back to a small generated candidate
   if (!rankedAll || rankedAll.length === 0) {
-    let candidate = `I love ${i1} in ${city}`;
-    candidate = randomVariant(sanitizeCandidate(candidate), i1, i2);
+    let candidate = randomVariant(
+      sanitizeCandidate(`I love trying new things in ${city}`)
+    );
     let counter = 1;
     while (usedAnswers.has(candidate)) {
       candidate = randomVariant(
-        sanitizeCandidate(`I love ${i1} in ${city} (${counter})`),
-        i1,
-        i2
+        sanitizeCandidate(`I love trying new things in ${city} (${counter})`)
       );
       counter += 1;
     }
@@ -429,42 +380,10 @@ const chooseUniqueAnswer = async (
   }
 
   const base = rankedAll[0].c;
-
-  // If the best base already mentions the interest or the city, just return a unique variant of it
-  const baseLower = base.toLowerCase();
-  if (
-    baseLower.includes(i1.toLowerCase()) ||
-    baseLower.includes(city.toLowerCase())
-  ) {
-    let candidate = randomVariant(sanitizeCandidate(base), i1, i2);
-    let counter = 1;
-    while (usedAnswers.has(candidate)) {
-      candidate = randomVariant(
-        sanitizeCandidate(`${base} (${counter})`),
-        i1,
-        i2
-      );
-      counter += 1;
-    }
-    return candidate;
-  }
-
-  // Otherwise, produce a natural-sounding variant that incorporates the user's interests
-  let variant = `${base} — especially when it comes to ${i1} in ${city}`;
-  // If i2 differs, sometimes prefer mentioning both interests concisely
-  if (i2 && i2 !== i1) {
-    variant = `${base} — especially for ${i1} and ${i2}`;
-  }
-
-  // Ensure the variant is truly unique by appending a counter if needed
-  let candidate = randomVariant(sanitizeCandidate(variant), i1, i2);
+  let candidate = randomVariant(sanitizeCandidate(base));
   let counter = 1;
   while (usedAnswers.has(candidate)) {
-    candidate = randomVariant(
-      sanitizeCandidate(`${variant} (${counter})`),
-      i1,
-      i2
-    );
+    candidate = randomVariant(sanitizeCandidate(`${base} (${counter})`));
     counter += 1;
   }
 

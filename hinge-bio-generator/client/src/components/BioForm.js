@@ -4,8 +4,6 @@ import { FiSend, FiLoader } from "react-icons/fi";
 
 const BioForm = ({ onSuccess }) => {
   const [formData, setFormData] = useState({
-    gender: "",
-    keyInterests: [],
     desiredVibe: "funny",
   });
 
@@ -24,11 +22,7 @@ const BioForm = ({ onSuccess }) => {
     e.preventDefault();
     setError("");
 
-    // Validation
-    if (!formData.gender || formData.keyInterests.length === 0) {
-      setError("Please fill in all required fields");
-      return;
-    }
+    // No required profile fields anymore; only vibe is needed
 
     setLoading(true);
     try {
@@ -48,125 +42,6 @@ const BioForm = ({ onSuccess }) => {
   return (
     <form className="bio-form" onSubmit={handleSubmit}>
       <div className="form-group">
-        <label htmlFor="gender">Gender *</label>
-        <select
-          id="gender"
-          name="gender"
-          value={formData.gender}
-          onChange={handleInputChange}
-          required
-        >
-          <option value="">Select gender</option>
-          <option value="female">Female</option>
-          <option value="male">Male</option>
-          <option value="non-binary">Non-binary</option>
-          <option value="other">Other</option>
-          <option value="prefer-not-to-say">Prefer not to say</option>
-        </select>
-      </div>
-
-      <div className="form-group">
-        <label htmlFor="interest1">Interest 1 *</label>
-        <select
-          id="interest1"
-          value={formData.keyInterests[0] || ""}
-          onChange={(e) => {
-            const newInterests = [...formData.keyInterests];
-            if (e.target.value) {
-              newInterests[0] = e.target.value;
-            } else {
-              newInterests.splice(0, 1);
-            }
-            setFormData((prev) => ({ ...prev, keyInterests: newInterests }));
-          }}
-          required
-        >
-          <option value="">Select first interest</option>
-          {[
-            "travel",
-            "cooking",
-            "fitness",
-            "music",
-            "photography",
-            "reading",
-            "hiking",
-            "art",
-            "movies",
-            "dancing",
-            "gaming",
-            "sports",
-            "wine",
-            "coffee",
-            "yoga",
-            "writing",
-            "fashion",
-            "tech",
-            "dogs",
-            "cats",
-            "beach",
-            "mountains",
-            "food",
-            "comedy",
-          ].map((interest) => (
-            <option key={interest} value={interest}>
-              {interest.charAt(0).toUpperCase() + interest.slice(1)}
-            </option>
-          ))}
-        </select>
-      </div>
-
-      <div className="form-group">
-        <label htmlFor="interest2">Interest 2</label>
-        <select
-          id="interest2"
-          value={formData.keyInterests[1] || ""}
-          onChange={(e) => {
-            const newInterests = [...formData.keyInterests];
-            if (e.target.value) {
-              newInterests[1] = e.target.value;
-            } else {
-              newInterests.splice(1, 1);
-            }
-            setFormData((prev) => ({ ...prev, keyInterests: newInterests }));
-          }}
-        >
-          <option value="">Select second interest (optional)</option>
-          {[
-            "travel",
-            "cooking",
-            "fitness",
-            "music",
-            "photography",
-            "reading",
-            "hiking",
-            "art",
-            "movies",
-            "dancing",
-            "gaming",
-            "sports",
-            "wine",
-            "coffee",
-            "yoga",
-            "writing",
-            "fashion",
-            "tech",
-            "dogs",
-            "cats",
-            "beach",
-            "mountains",
-            "food",
-            "comedy",
-          ]
-            .filter((interest) => interest !== formData.keyInterests[0])
-            .map((interest) => (
-              <option key={interest} value={interest}>
-                {interest.charAt(0).toUpperCase() + interest.slice(1)}
-              </option>
-            ))}
-        </select>
-      </div>
-
-      <div className="form-group">
         <label htmlFor="vibe">Desired Vibe *</label>
         <select
           id="vibe"
@@ -174,12 +49,12 @@ const BioForm = ({ onSuccess }) => {
           value={formData.desiredVibe}
           onChange={handleInputChange}
         >
-          <option value="funny">Funny 😂</option>
-          <option value="serious">Serious 🎯</option>
-          <option value="quirky">Quirky 🌟</option>
-          <option value="romantic">Romantic 💕</option>
-          <option value="adventurous">Adventurous 🚀</option>
-          <option value="intellectual">Intellectual 🧠</option>
+          <option value="funny">Funny</option>
+          <option value="serious">Serious</option>
+          <option value="quirky">Quirky</option>
+          <option value="romantic">Romantic</option>
+          <option value="adventurous">Adventurous</option>
+          <option value="intellectual">Intellectual</option>
         </select>
       </div>
 

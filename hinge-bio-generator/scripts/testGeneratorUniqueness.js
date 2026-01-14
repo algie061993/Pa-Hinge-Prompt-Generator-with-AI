@@ -46,6 +46,16 @@ function tokenize(s) {
         "touch",
         "gifts",
       ],
+      "We're the same type of weird if": [
+        "weird",
+        "quirky",
+        "same",
+        "weirdness",
+        "odd",
+        "strange",
+        "quirk",
+        "quirks",
+      ],
     };
 
     selectedPrompts.forEach((p) => {
