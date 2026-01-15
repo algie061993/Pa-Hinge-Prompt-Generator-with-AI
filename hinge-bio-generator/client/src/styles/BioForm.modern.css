@@ -1,130 +1,81 @@
-/* Modern BioForm Design */
-
 .bio-form {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px 24px;
-  padding: 0;
-}
-
-.form-group {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 2rem;
 }
 
-.form-group label {
-  color: var(--text-primary);
-  font-size: 14px;
-  font-weight: 600;
-  margin-bottom: 2px;
+.vibe-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-.form-group input,
-.form-group select {
-  background: var(--bg-secondary);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-sm);
-  padding: 12px 16px;
-  color: var(--text-primary);
-  font-size: 14px;
-  transition: all 0.2s ease;
-}
-
-.form-group input:focus,
-.form-group select:focus {
-  outline: none;
-  border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
-  background: var(--bg-hover);
-}
-
-.form-group input::placeholder {
-  color: var(--text-muted);
-}
-
-.interest-input-group {
+.vibe-card {
+  position: relative;
   display: flex;
-  gap: 12px;
-}
-
-.interest-input-group input {
-  flex: 1;
-}
-
-.btn-add-interest {
-  background: var(--accent);
-  border: none;
-  border-radius: var(--radius-sm);
-  padding: 12px 20px;
-  color: white;
-  font-size: 13px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  white-space: nowrap;
-}
-
-.btn-add-interest:hover {
-  background: var(--accent-hover);
-  transform: translateY(-2px);
-}
-
-
-
-.btn-submit {
-  grid-column: 1 / -1;
-  justify-self: center;
-  background: linear-gradient(135deg, var(--accent), var(--success));
-  border: none;
-  border-radius: var(--radius-sm);
-  padding: 14px 32px;
-  color: white;
-  font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;
-  display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 10px;
-  transition: all 0.2s ease;
-  box-shadow: 0 4px 16px rgba(99, 102, 241, 0.3);
-  margin-top: 16px;
+  justify-content: center;
+  padding: 1.25rem 1rem;
+  background: var(--bg);
+  border: 2px solid var(--border);
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  user-select: none;
 }
 
-.btn-submit:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 24px rgba(99, 102, 241, 0.4);
+.vibe-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--vibe-color);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
 }
 
-.btn-submit:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-  transform: none;
+.vibe-card.selected {
+  background: linear-gradient(135deg, var(--vibe-color) 0%, var(--vibe-color) 100%);
+  border-color: var(--vibe-color);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  transform: translateY(-4px) scale(1.05);
+}
+
+.vibe-card.selected .vibe-label {
+  color: var(--bg);
+  font-weight: 700;
+}
+
+.vibe-emoji {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.vibe-card:hover .vibe-emoji,
+.vibe-card.selected .vibe-emoji {
+  transform: scale(1.2);
+}
+
+.vibe-label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text);
+  transition: color 0.3s ease;
 }
 
 .error-message {
-  grid-column: 1 / -1;
   background: rgba(239, 68, 68, 0.1);
-  border: 1px solid rgba(239, 68, 68, 0.2);
-  border-radius: var(--radius-sm);
-  padding: 16px 20px;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  border-radius: 12px;
+  padding: 1rem;
   color: #ef4444;
-  font-size: 14px;
+  font-size: 0.95rem;
   font-weight: 500;
+  text-align: center;
 }
 
 @media (max-width: 768px) {
-  .bio-form {
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-  
-  .interest-input-group {
-    flex-direction: column;
-  }
-  
-  .btn-submit {
-    padding: 14px 28px;
-    font-size: 15px;
+  .vibe-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }

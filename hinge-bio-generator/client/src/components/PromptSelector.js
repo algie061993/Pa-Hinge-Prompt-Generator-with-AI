@@ -309,38 +309,33 @@ const PromptSelector = ({ userParams, formActive, onClose }) => {
         </div>
 
         <div className="prompt-actions">
-          {" "}
           <button
-            className="btn-regenerate button-focus"
-            onClick={() => {
-              if (lastPrompts.length === 0) return;
+            className="btn-regenerate"
+            onClick={async () => {
+              if (lastPrompts.length === 0 || !results) return;
               setError("");
               setLoading(true);
-              generatePromptAnswers(userParams, lastPrompts)
-                .then((response) => {
-                  if (!response?.promptAnswers) {
-                    setError("No answers returned from server. Try again.");
-                    setResults(null);
-                  } else {
-                    setResults(response);
-                  }
-                })
-                .catch((err) =>
-                  setError(err.error || "Failed to generate answers")
-                )
-                .finally(() => setLoading(false));
+              try {
+                const response = await generatePromptAnswers(userParams, lastPrompts);
+                if (!response?.promptAnswers) {
+                  setError("No answers returned from server. Try again.");
+                  setResults(null);
+                } else {
+                  setResults(response);
+                }
+              } catch (err) {
+                setError(err.error || "Failed to generate answers");
+              } finally {
+                setLoading(false);
+              }
             }}
-            title="Regenerate"
-            aria-label="Regenerate answers for last prompts"
+            disabled={!results || loading}
           >
+            <FiLoader className={loading ? "spinner" : ""} />
             Regenerate
           </button>
-          <button
-            className="btn-close-prompts button-focus"
-            onClick={onClose}
-            title="Close"
-            aria-label="Close prompt panel"
-          >
+          <button className="btn-close-prompts" onClick={onClose}>
+            <FiX />
             Close
           </button>
         </div>

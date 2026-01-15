@@ -10,27 +10,13 @@ const BioForm = ({ onSuccess }) => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const handleVibeChange = (value) => {
+    setFormData({ desiredVibe: value });
     setError("");
-
-    // No required profile fields anymore; only vibe is needed
-
     setLoading(true);
+    
     try {
-      // Just pass the form data without calling generateBios
-      onSuccess({
-        userParams: formData,
-      });
-      // Don't clear the form - keep it for prompt generation
+      onSuccess({ userParams: { desiredVibe: value } });
     } catch (err) {
       setError("An error occurred. Please try again.");
       console.error("Error:", err);
@@ -40,40 +26,30 @@ const BioForm = ({ onSuccess }) => {
   };
 
   return (
-    <form className="bio-form" onSubmit={handleSubmit}>
-      <div className="form-group">
-        <label htmlFor="vibe">Desired Vibe *</label>
-        <select
-          id="vibe"
-          name="desiredVibe"
-          value={formData.desiredVibe}
-          onChange={handleInputChange}
-        >
-          <option value="funny">Funny</option>
-          <option value="serious">Serious</option>
-          <option value="quirky">Quirky</option>
-          <option value="romantic">Romantic</option>
-          <option value="adventurous">Adventurous</option>
-          <option value="intellectual">Intellectual</option>
-        </select>
+    <div className="bio-form">
+      <div className="vibe-grid">
+        {[
+          { value: "funny", label: "Funny", emoji: "😂", color: "#ffe66d" },
+          { value: "romantic", label: "Romantic", emoji: "❤️", color: "#ff6b6b" },
+          { value: "adventurous", label: "Adventurous", emoji: "🌟", color: "#4ecdc4" },
+          { value: "quirky", label: "Quirky", emoji: "🎨", color: "#a29bfe" },
+          { value: "serious", label: "Serious", emoji: "💼", color: "#74b9ff" },
+          { value: "intellectual", label: "Intellectual", emoji: "🧠", color: "#fd79a8" },
+        ].map((vibe) => (
+          <div
+            key={vibe.value}
+            className={`vibe-card ${formData.desiredVibe === vibe.value ? 'selected' : ''}`}
+            style={{ '--vibe-color': vibe.color }}
+            onClick={() => handleVibeChange(vibe.value)}
+          >
+            <div className="vibe-emoji">{vibe.emoji}</div>
+            <div className="vibe-label">{vibe.label}</div>
+          </div>
+        ))}
       </div>
 
       {error && <div className="error-message">{error}</div>}
-
-      <button type="submit" className="btn-submit" disabled={loading}>
-        {loading ? (
-          <>
-            <FiLoader className="spinner" />
-            Loading...
-          </>
-        ) : (
-          <>
-            <FiSend />
-            Next
-          </>
-        )}
-      </button>
-    </form>
+    </div>
   );
 };
 
